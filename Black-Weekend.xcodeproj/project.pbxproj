@@ -11,9 +11,19 @@
 		7A00D85A1C3A1C4800FA1077 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A00D8591C3A1C4800FA1077 /* AppDelegate.m */; };
 		7A00D85C1C3A1C4800FA1077 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A00D85B1C3A1C4800FA1077 /* Assets.xcassets */; };
 		7A00D85F1C3A1C4800FA1077 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A00D85D1C3A1C4800FA1077 /* LaunchScreen.storyboard */; };
+		7A00D88F1C3A4E4100FA1077 /* DiscoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A00D8801C3A4E4100FA1077 /* DiscoverViewController.m */; };
+		7A00D8901C3A4E4100FA1077 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A00D8861C3A4E4100FA1077 /* MainViewController.m */; };
+		7A00D8911C3A4E4100FA1077 /* MineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A00D88C1C3A4E4100FA1077 /* MineViewController.m */; };
+		7A00D8971C3A50A300FA1077 /* Main.Storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A00D8961C3A50A300FA1077 /* Main.Storyboard */; };
+		7A00D8991C3A50BD00FA1077 /* Discover.Storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A00D8981C3A50BD00FA1077 /* Discover.Storyboard */; };
+		7A00D89D1C3A50D500FA1077 /* Mine.Storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A00D89C1C3A50D500FA1077 /* Mine.Storyboard */; };
+		9ECE9887F40BDA70131CCABC /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0231E9CDD6F1199837462202 /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0231E9CDD6F1199837462202 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		178F65ED557D70289BD74353 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		63B2E4E066E35A8EBF073526 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		7A00D8521C3A1C4800FA1077 /* Black-Weekend.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Black-Weekend.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A00D8561C3A1C4800FA1077 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		7A00D8581C3A1C4800FA1077 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -21,6 +31,15 @@
 		7A00D85B1C3A1C4800FA1077 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7A00D85E1C3A1C4800FA1077 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7A00D8601C3A1C4800FA1077 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7A00D87F1C3A4E4100FA1077 /* DiscoverViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiscoverViewController.h; sourceTree = "<group>"; };
+		7A00D8801C3A4E4100FA1077 /* DiscoverViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiscoverViewController.m; sourceTree = "<group>"; };
+		7A00D8851C3A4E4100FA1077 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		7A00D8861C3A4E4100FA1077 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		7A00D88B1C3A4E4100FA1077 /* MineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineViewController.h; sourceTree = "<group>"; };
+		7A00D88C1C3A4E4100FA1077 /* MineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineViewController.m; sourceTree = "<group>"; };
+		7A00D8961C3A50A300FA1077 /* Main.Storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.Storyboard; sourceTree = "<group>"; };
+		7A00D8981C3A50BD00FA1077 /* Discover.Storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Discover.Storyboard; sourceTree = "<group>"; };
+		7A00D89C1C3A50D500FA1077 /* Mine.Storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Mine.Storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -28,17 +47,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9ECE9887F40BDA70131CCABC /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3B292FC6C0B3CB159E8D581A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0231E9CDD6F1199837462202 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6DFABED2B187FAC994E9E4FB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				63B2E4E066E35A8EBF073526 /* Pods.debug.xcconfig */,
+				178F65ED557D70289BD74353 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		7A00D8491C3A1C4800FA1077 = {
 			isa = PBXGroup;
 			children = (
 				7A00D8541C3A1C4800FA1077 /* Black-Weekend */,
 				7A00D8531C3A1C4800FA1077 /* Products */,
+				6DFABED2B187FAC994E9E4FB /* Pods */,
+				3B292FC6C0B3CB159E8D581A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -53,6 +92,9 @@
 		7A00D8541C3A1C4800FA1077 /* Black-Weekend */ = {
 			isa = PBXGroup;
 			children = (
+				7A00D87C1C3A4E4100FA1077 /* Classes */,
+				7A00D8921C3A4E4B00FA1077 /* Library */,
+				7A00D8931C3A4FBE00FA1077 /* Resources */,
 				7A00D8581C3A1C4800FA1077 /* AppDelegate.h */,
 				7A00D8591C3A1C4800FA1077 /* AppDelegate.m */,
 				7A00D85B1C3A1C4800FA1077 /* Assets.xcassets */,
@@ -71,6 +113,133 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		7A00D87C1C3A4E4100FA1077 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				7A00D8831C3A4E4100FA1077 /* main */,
+				7A00D87D1C3A4E4100FA1077 /* discover */,
+				7A00D8891C3A4E4100FA1077 /* mine */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		7A00D87D1C3A4E4100FA1077 /* discover */ = {
+			isa = PBXGroup;
+			children = (
+				7A00D87E1C3A4E4100FA1077 /* Controllers */,
+				7A00D8811C3A4E4100FA1077 /* Models */,
+				7A00D8821C3A4E4100FA1077 /* Views */,
+			);
+			path = discover;
+			sourceTree = "<group>";
+		};
+		7A00D87E1C3A4E4100FA1077 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				7A00D87F1C3A4E4100FA1077 /* DiscoverViewController.h */,
+				7A00D8801C3A4E4100FA1077 /* DiscoverViewController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		7A00D8811C3A4E4100FA1077 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		7A00D8821C3A4E4100FA1077 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				7A00D8981C3A50BD00FA1077 /* Discover.Storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		7A00D8831C3A4E4100FA1077 /* main */ = {
+			isa = PBXGroup;
+			children = (
+				7A00D8841C3A4E4100FA1077 /* Controllers */,
+				7A00D8871C3A4E4100FA1077 /* Models */,
+				7A00D8881C3A4E4100FA1077 /* Views */,
+			);
+			path = main;
+			sourceTree = "<group>";
+		};
+		7A00D8841C3A4E4100FA1077 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				7A00D8851C3A4E4100FA1077 /* MainViewController.h */,
+				7A00D8861C3A4E4100FA1077 /* MainViewController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		7A00D8871C3A4E4100FA1077 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		7A00D8881C3A4E4100FA1077 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				7A00D8961C3A50A300FA1077 /* Main.Storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		7A00D8891C3A4E4100FA1077 /* mine */ = {
+			isa = PBXGroup;
+			children = (
+				7A00D88A1C3A4E4100FA1077 /* Controllers */,
+				7A00D88D1C3A4E4100FA1077 /* Models */,
+				7A00D88E1C3A4E4100FA1077 /* Views */,
+			);
+			path = mine;
+			sourceTree = "<group>";
+		};
+		7A00D88A1C3A4E4100FA1077 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				7A00D88B1C3A4E4100FA1077 /* MineViewController.h */,
+				7A00D88C1C3A4E4100FA1077 /* MineViewController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		7A00D88D1C3A4E4100FA1077 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		7A00D88E1C3A4E4100FA1077 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				7A00D89C1C3A50D500FA1077 /* Mine.Storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		7A00D8921C3A4E4B00FA1077 /* Library */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Library;
+			sourceTree = "<group>";
+		};
+		7A00D8931C3A4FBE00FA1077 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Resources;
+			path = Library/Resources;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -78,9 +247,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7A00D8631C3A1C4800FA1077 /* Build configuration list for PBXNativeTarget "Black-Weekend" */;
 			buildPhases = (
+				7187603F6505D86E94D1BB84 /* Check Pods Manifest.lock */,
 				7A00D84E1C3A1C4800FA1077 /* Sources */,
 				7A00D84F1C3A1C4800FA1077 /* Frameworks */,
 				7A00D8501C3A1C4800FA1077 /* Resources */,
+				6B4E56D8ABF713616F284F33 /* Embed Pods Frameworks */,
+				4858204685801139A2B9A30E /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -128,6 +300,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7A00D89D1C3A50D500FA1077 /* Mine.Storyboard in Resources */,
+				7A00D8971C3A50A300FA1077 /* Main.Storyboard in Resources */,
+				7A00D8991C3A50BD00FA1077 /* Discover.Storyboard in Resources */,
 				7A00D85C1C3A1C4800FA1077 /* Assets.xcassets in Resources */,
 				7A00D85F1C3A1C4800FA1077 /* LaunchScreen.storyboard in Resources */,
 			);
@@ -135,13 +310,64 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		4858204685801139A2B9A30E /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6B4E56D8ABF713616F284F33 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7187603F6505D86E94D1BB84 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		7A00D84E1C3A1C4800FA1077 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				7A00D85A1C3A1C4800FA1077 /* AppDelegate.m in Sources */,
+				7A00D88F1C3A4E4100FA1077 /* DiscoverViewController.m in Sources */,
+				7A00D8911C3A4E4100FA1077 /* MineViewController.m in Sources */,
 				7A00D8571C3A1C4800FA1077 /* main.m in Sources */,
+				7A00D8901C3A4E4100FA1077 /* MainViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -241,6 +467,7 @@
 		};
 		7A00D8641C3A1C4800FA1077 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 63B2E4E066E35A8EBF073526 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Black-Weekend/Info.plist";
@@ -252,6 +479,7 @@
 		};
 		7A00D8651C3A1C4800FA1077 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 178F65ED557D70289BD74353 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Black-Weekend/Info.plist";
@@ -280,6 +508,7 @@
 				7A00D8651C3A1C4800FA1077 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
