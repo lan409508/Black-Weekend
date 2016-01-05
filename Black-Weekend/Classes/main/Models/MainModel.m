@@ -23,13 +23,16 @@
             self.counts = dic[@"counts"];
             self.startTime = dic[@"startTime"];
             self.endTime = dic[@"endTime"];
+            self.iamge_big = dic[@"image_big"];
+            self.title = dic[@"title"];
+            self.activityId = dic[@"id"];
         } else {
             //如果是推荐专题
             self.activityDescription = dic[@"description"];
         }
         self.iamge_big = dic[@"image_big"];
-        self.title = dic[@"title"];
-        self.activityId = dic[@"id"];
+//        self.title = dic[@"title"];
+//        self.activityId = dic[@"id"];
     }
     
     

@@ -148,6 +148,66 @@
 		7A0FBB041C3BA052004D3C31 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A0FBB031C3BA052004D3C31 /* AVFoundation.framework */; };
 		7A0FBB071C3BA081004D3C31 /* MainModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A0FBB061C3BA081004D3C31 /* MainModel.m */; };
 		7A0FBB0B1C3BA4F6004D3C31 /* Property List.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7A0FBB0A1C3BA4F6004D3C31 /* Property List.plist */; };
+		7A0FBB491C3BC316004D3C31 /* btn_cover.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A0FBB0D1C3BC316004D3C31 /* btn_cover.png */; };
+		7A0FBB4A1C3BC316004D3C31 /* btn_downarrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A0FBB0E1C3BC316004D3C31 /* btn_downarrow.png */; };
+		7A0FBB4B1C3BC316004D3C31 /* btn_exchange.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A0FBB0F1C3BC316004D3C31 /* btn_exchange.png */; };
+		7A0FBB4C1C3BC316004D3C31 /* btn_nearby.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A0FBB101C3BC316004D3C31 /* btn_nearby.png */; };
+		7A0FBB4D1C3BC316004D3C31 /* btn_refresh.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A0FBB111C3BC316004D3C31 /* btn_refresh.png */; };
+		7A0FBB4E1C3BC316004D3C31 /* btn_screening.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A0FBB121C3BC316004D3C31 /* btn_screening.png */; };
+		7A0FBB4F1C3BC316004D3C31 /* btn_search.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A0FBB131C3BC316004D3C31 /* btn_search.png */; };
+		7A0FBB501C3BC316004D3C31 /* btn_shezhi.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A0FBB141C3BC316004D3C31 /* btn_shezhi.png */; };
+		7A0FBB511C3BC316004D3C31 /* btn_timetree.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A0FBB151C3BC316004D3C31 /* btn_timetree.png */; };
+		7A0FBB521C3BC316004D3C31 /* btn_uparrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A0FBB161C3BC316004D3C31 /* btn_uparrow.png */; };
+		7A0FBB531C3BC316004D3C31 /* default_gouwu.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A0FBB171C3BC316004D3C31 /* default_gouwu.png */; };
+		7A0FBB541C3BC316004D3C31 /* default_yuer.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A0FBB181C3BC316004D3C31 /* default_yuer.png */; };
+		7A0FBB551C3BC316004D3C31 /* ft_found_normal_ic.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A0FBB191C3BC316004D3C31 /* ft_found_normal_ic.png */; };
+		7A0FBB561C3BC316004D3C31 /* ft_found_selected_ic.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A0FBB1A1C3BC316004D3C31 /* ft_found_selected_ic.png */; };
+		7A0FBB571C3BC316004D3C31 /* ft_home_normal_ic.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A0FBB1B1C3BC316004D3C31 /* ft_home_normal_ic.png */; };
+		7A0FBB581C3BC316004D3C31 /* ft_home_selected_ic.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A0FBB1C1C3BC316004D3C31 /* ft_home_selected_ic.png */; };
+		7A0FBB591C3BC316004D3C31 /* ft_person_normal_ic.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A0FBB1D1C3BC316004D3C31 /* ft_person_normal_ic.png */; };
+		7A0FBB5A1C3BC316004D3C31 /* ft_person_selected_ic.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A0FBB1E1C3BC316004D3C31 /* ft_person_selected_ic.png */; };
+		7A0FBB5B1C3BC316004D3C31 /* home_huodong.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A0FBB1F1C3BC316004D3C31 /* home_huodong.png */; };
+		7A0FBB5C1C3BC316004D3C31 /* home_icon_jingdin.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A0FBB201C3BC316004D3C31 /* home_icon_jingdin.png */; };
+		7A0FBB5D1C3BC316004D3C31 /* home_icon_qinzi.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A0FBB211C3BC316004D3C31 /* home_icon_qinzi.png */; };
+		7A0FBB5E1C3BC316004D3C31 /* home_icon_yanchu.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A0FBB221C3BC316004D3C31 /* home_icon_yanchu.png */; };
+		7A0FBB5F1C3BC316004D3C31 /* home_icon_yizhi.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A0FBB231C3BC316004D3C31 /* home_icon_yizhi.png */; };
+		7A0FBB601C3BC316004D3C31 /* home_recommd_rc.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A0FBB241C3BC316004D3C31 /* home_recommd_rc.png */; };
+		7A0FBB611C3BC316004D3C31 /* home_recommed_ac.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A0FBB251C3BC316004D3C31 /* home_recommed_ac.png */; };
+		7A0FBB621C3BC316004D3C31 /* home_zhuanti.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A0FBB261C3BC316004D3C31 /* home_zhuanti.png */; };
+		7A0FBB631C3BC316004D3C31 /* ic_com_sina_weibo_sdk_button_blue_focused.9.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A0FBB271C3BC316004D3C31 /* ic_com_sina_weibo_sdk_button_blue_focused.9.png */; };
+		7A0FBB641C3BC316004D3C31 /* ic_com_sina_weibo_sdk_button_blue_normal.9.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A0FBB281C3BC316004D3C31 /* ic_com_sina_weibo_sdk_button_blue_normal.9.png */; };
+		7A0FBB651C3BC316004D3C31 /* ic_com_sina_weibo_sdk_button_blue_pressed.9.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A0FBB291C3BC316004D3C31 /* ic_com_sina_weibo_sdk_button_blue_pressed.9.png */; };
+		7A0FBB661C3BC316004D3C31 /* ic_com_sina_weibo_sdk_button_grey_focused.9.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A0FBB2A1C3BC316004D3C31 /* ic_com_sina_weibo_sdk_button_grey_focused.9.png */; };
+		7A0FBB671C3BC316004D3C31 /* ic_com_sina_weibo_sdk_button_grey_normal.9.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A0FBB2B1C3BC316004D3C31 /* ic_com_sina_weibo_sdk_button_grey_normal.9.png */; };
+		7A0FBB681C3BC316004D3C31 /* ic_com_sina_weibo_sdk_button_grey_pressed.9.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A0FBB2C1C3BC316004D3C31 /* ic_com_sina_weibo_sdk_button_grey_pressed.9.png */; };
+		7A0FBB691C3BC316004D3C31 /* ic_com_sina_weibo_sdk_login_button_with_frame_logo_focused.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A0FBB2D1C3BC316004D3C31 /* ic_com_sina_weibo_sdk_login_button_with_frame_logo_focused.png */; };
+		7A0FBB6A1C3BC316004D3C31 /* ic_com_sina_weibo_sdk_login_button_with_frame_logo_normal.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A0FBB2E1C3BC316004D3C31 /* ic_com_sina_weibo_sdk_login_button_with_frame_logo_normal.png */; };
+		7A0FBB6B1C3BC316004D3C31 /* ic_com_sina_weibo_sdk_login_button_with_frame_logo_pressed.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A0FBB2F1C3BC316004D3C31 /* ic_com_sina_weibo_sdk_login_button_with_frame_logo_pressed.png */; };
+		7A0FBB6C1C3BC316004D3C31 /* ic_com_sina_weibo_sdk_login_with_account_text_focused.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A0FBB301C3BC316004D3C31 /* ic_com_sina_weibo_sdk_login_with_account_text_focused.png */; };
+		7A0FBB6D1C3BC316004D3C31 /* ic_com_sina_weibo_sdk_login_with_account_text_normal.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A0FBB311C3BC316004D3C31 /* ic_com_sina_weibo_sdk_login_with_account_text_normal.png */; };
+		7A0FBB6E1C3BC316004D3C31 /* ic_com_sina_weibo_sdk_login_with_account_text_pressed.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A0FBB321C3BC316004D3C31 /* ic_com_sina_weibo_sdk_login_with_account_text_pressed.png */; };
+		7A0FBB6F1C3BC316004D3C31 /* ic_com_sina_weibo_sdk_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A0FBB331C3BC316004D3C31 /* ic_com_sina_weibo_sdk_logo.png */; };
+		7A0FBB701C3BC316004D3C31 /* icon_ac.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A0FBB341C3BC316004D3C31 /* icon_ac.png */; };
+		7A0FBB711C3BC316004D3C31 /* icon_ele.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A0FBB351C3BC316004D3C31 /* icon_ele.png */; };
+		7A0FBB721C3BC316004D3C31 /* icon_like.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A0FBB361C3BC316004D3C31 /* icon_like.png */; };
+		7A0FBB731C3BC316004D3C31 /* icon_msg.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A0FBB371C3BC316004D3C31 /* icon_msg.png */; };
+		7A0FBB741C3BC316004D3C31 /* icon_order.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A0FBB381C3BC316004D3C31 /* icon_order.png */; };
+		7A0FBB751C3BC316004D3C31 /* icon_ordered.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A0FBB391C3BC316004D3C31 /* icon_ordered.png */; };
+		7A0FBB761C3BC316004D3C31 /* icon_shop.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A0FBB3A1C3BC316004D3C31 /* icon_shop.png */; };
+		7A0FBB771C3BC316004D3C31 /* icon_user.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A0FBB3B1C3BC316004D3C31 /* icon_user.png */; };
+		7A0FBB781C3BC316004D3C31 /* icon_weixin.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A0FBB3C1C3BC316004D3C31 /* icon_weixin.png */; };
+		7A0FBB791C3BC316004D3C31 /* list_down.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A0FBB3D1C3BC316004D3C31 /* list_down.png */; };
+		7A0FBB7A1C3BC316004D3C31 /* list_integral.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A0FBB3E1C3BC316004D3C31 /* list_integral.png */; };
+		7A0FBB7B1C3BC316004D3C31 /* list_like_heart.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A0FBB3F1C3BC316004D3C31 /* list_like_heart.png */; };
+		7A0FBB7C1C3BC316004D3C31 /* list_make_out.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A0FBB401C3BC316004D3C31 /* list_make_out.png */; };
+		7A0FBB7D1C3BC316004D3C31 /* list_selected.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A0FBB411C3BC316004D3C31 /* list_selected.png */; };
+		7A0FBB7E1C3BC316004D3C31 /* list_up.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A0FBB421C3BC316004D3C31 /* list_up.png */; };
+		7A0FBB7F1C3BC316004D3C31 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A0FBB431C3BC316004D3C31 /* logo.png */; };
+		7A0FBB801C3BC316004D3C31 /* noselect.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A0FBB441C3BC316004D3C31 /* noselect.png */; };
+		7A0FBB811C3BC316004D3C31 /* pos.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A0FBB451C3BC316004D3C31 /* pos.png */; };
+		7A0FBB821C3BC316004D3C31 /* red_shape.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A0FBB461C3BC316004D3C31 /* red_shape.png */; };
+		7A0FBB831C3BC316004D3C31 /* select.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A0FBB471C3BC316004D3C31 /* select.png */; };
+		7A0FBB841C3BC316004D3C31 /* shopping_trolley.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A0FBB481C3BC316004D3C31 /* shopping_trolley.png */; };
 		9ECE9887F40BDA70131CCABC /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0231E9CDD6F1199837462202 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -304,6 +364,66 @@
 		7A0FBB051C3BA081004D3C31 /* MainModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainModel.h; sourceTree = "<group>"; };
 		7A0FBB061C3BA081004D3C31 /* MainModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainModel.m; sourceTree = "<group>"; };
 		7A0FBB0A1C3BA4F6004D3C31 /* Property List.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Property List.plist"; sourceTree = "<group>"; };
+		7A0FBB0D1C3BC316004D3C31 /* btn_cover.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_cover.png; sourceTree = "<group>"; };
+		7A0FBB0E1C3BC316004D3C31 /* btn_downarrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_downarrow.png; sourceTree = "<group>"; };
+		7A0FBB0F1C3BC316004D3C31 /* btn_exchange.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_exchange.png; sourceTree = "<group>"; };
+		7A0FBB101C3BC316004D3C31 /* btn_nearby.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_nearby.png; sourceTree = "<group>"; };
+		7A0FBB111C3BC316004D3C31 /* btn_refresh.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_refresh.png; sourceTree = "<group>"; };
+		7A0FBB121C3BC316004D3C31 /* btn_screening.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_screening.png; sourceTree = "<group>"; };
+		7A0FBB131C3BC316004D3C31 /* btn_search.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_search.png; sourceTree = "<group>"; };
+		7A0FBB141C3BC316004D3C31 /* btn_shezhi.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_shezhi.png; sourceTree = "<group>"; };
+		7A0FBB151C3BC316004D3C31 /* btn_timetree.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_timetree.png; sourceTree = "<group>"; };
+		7A0FBB161C3BC316004D3C31 /* btn_uparrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_uparrow.png; sourceTree = "<group>"; };
+		7A0FBB171C3BC316004D3C31 /* default_gouwu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = default_gouwu.png; sourceTree = "<group>"; };
+		7A0FBB181C3BC316004D3C31 /* default_yuer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = default_yuer.png; sourceTree = "<group>"; };
+		7A0FBB191C3BC316004D3C31 /* ft_found_normal_ic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ft_found_normal_ic.png; sourceTree = "<group>"; };
+		7A0FBB1A1C3BC316004D3C31 /* ft_found_selected_ic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ft_found_selected_ic.png; sourceTree = "<group>"; };
+		7A0FBB1B1C3BC316004D3C31 /* ft_home_normal_ic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ft_home_normal_ic.png; sourceTree = "<group>"; };
+		7A0FBB1C1C3BC316004D3C31 /* ft_home_selected_ic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ft_home_selected_ic.png; sourceTree = "<group>"; };
+		7A0FBB1D1C3BC316004D3C31 /* ft_person_normal_ic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ft_person_normal_ic.png; sourceTree = "<group>"; };
+		7A0FBB1E1C3BC316004D3C31 /* ft_person_selected_ic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ft_person_selected_ic.png; sourceTree = "<group>"; };
+		7A0FBB1F1C3BC316004D3C31 /* home_huodong.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home_huodong.png; sourceTree = "<group>"; };
+		7A0FBB201C3BC316004D3C31 /* home_icon_jingdin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home_icon_jingdin.png; sourceTree = "<group>"; };
+		7A0FBB211C3BC316004D3C31 /* home_icon_qinzi.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home_icon_qinzi.png; sourceTree = "<group>"; };
+		7A0FBB221C3BC316004D3C31 /* home_icon_yanchu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home_icon_yanchu.png; sourceTree = "<group>"; };
+		7A0FBB231C3BC316004D3C31 /* home_icon_yizhi.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home_icon_yizhi.png; sourceTree = "<group>"; };
+		7A0FBB241C3BC316004D3C31 /* home_recommd_rc.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home_recommd_rc.png; sourceTree = "<group>"; };
+		7A0FBB251C3BC316004D3C31 /* home_recommed_ac.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home_recommed_ac.png; sourceTree = "<group>"; };
+		7A0FBB261C3BC316004D3C31 /* home_zhuanti.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home_zhuanti.png; sourceTree = "<group>"; };
+		7A0FBB271C3BC316004D3C31 /* ic_com_sina_weibo_sdk_button_blue_focused.9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_com_sina_weibo_sdk_button_blue_focused.9.png; sourceTree = "<group>"; };
+		7A0FBB281C3BC316004D3C31 /* ic_com_sina_weibo_sdk_button_blue_normal.9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_com_sina_weibo_sdk_button_blue_normal.9.png; sourceTree = "<group>"; };
+		7A0FBB291C3BC316004D3C31 /* ic_com_sina_weibo_sdk_button_blue_pressed.9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_com_sina_weibo_sdk_button_blue_pressed.9.png; sourceTree = "<group>"; };
+		7A0FBB2A1C3BC316004D3C31 /* ic_com_sina_weibo_sdk_button_grey_focused.9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_com_sina_weibo_sdk_button_grey_focused.9.png; sourceTree = "<group>"; };
+		7A0FBB2B1C3BC316004D3C31 /* ic_com_sina_weibo_sdk_button_grey_normal.9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_com_sina_weibo_sdk_button_grey_normal.9.png; sourceTree = "<group>"; };
+		7A0FBB2C1C3BC316004D3C31 /* ic_com_sina_weibo_sdk_button_grey_pressed.9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_com_sina_weibo_sdk_button_grey_pressed.9.png; sourceTree = "<group>"; };
+		7A0FBB2D1C3BC316004D3C31 /* ic_com_sina_weibo_sdk_login_button_with_frame_logo_focused.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_com_sina_weibo_sdk_login_button_with_frame_logo_focused.png; sourceTree = "<group>"; };
+		7A0FBB2E1C3BC316004D3C31 /* ic_com_sina_weibo_sdk_login_button_with_frame_logo_normal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_com_sina_weibo_sdk_login_button_with_frame_logo_normal.png; sourceTree = "<group>"; };
+		7A0FBB2F1C3BC316004D3C31 /* ic_com_sina_weibo_sdk_login_button_with_frame_logo_pressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_com_sina_weibo_sdk_login_button_with_frame_logo_pressed.png; sourceTree = "<group>"; };
+		7A0FBB301C3BC316004D3C31 /* ic_com_sina_weibo_sdk_login_with_account_text_focused.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_com_sina_weibo_sdk_login_with_account_text_focused.png; sourceTree = "<group>"; };
+		7A0FBB311C3BC316004D3C31 /* ic_com_sina_weibo_sdk_login_with_account_text_normal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_com_sina_weibo_sdk_login_with_account_text_normal.png; sourceTree = "<group>"; };
+		7A0FBB321C3BC316004D3C31 /* ic_com_sina_weibo_sdk_login_with_account_text_pressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_com_sina_weibo_sdk_login_with_account_text_pressed.png; sourceTree = "<group>"; };
+		7A0FBB331C3BC316004D3C31 /* ic_com_sina_weibo_sdk_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_com_sina_weibo_sdk_logo.png; sourceTree = "<group>"; };
+		7A0FBB341C3BC316004D3C31 /* icon_ac.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_ac.png; sourceTree = "<group>"; };
+		7A0FBB351C3BC316004D3C31 /* icon_ele.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_ele.png; sourceTree = "<group>"; };
+		7A0FBB361C3BC316004D3C31 /* icon_like.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_like.png; sourceTree = "<group>"; };
+		7A0FBB371C3BC316004D3C31 /* icon_msg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_msg.png; sourceTree = "<group>"; };
+		7A0FBB381C3BC316004D3C31 /* icon_order.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_order.png; sourceTree = "<group>"; };
+		7A0FBB391C3BC316004D3C31 /* icon_ordered.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_ordered.png; sourceTree = "<group>"; };
+		7A0FBB3A1C3BC316004D3C31 /* icon_shop.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_shop.png; sourceTree = "<group>"; };
+		7A0FBB3B1C3BC316004D3C31 /* icon_user.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_user.png; sourceTree = "<group>"; };
+		7A0FBB3C1C3BC316004D3C31 /* icon_weixin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_weixin.png; sourceTree = "<group>"; };
+		7A0FBB3D1C3BC316004D3C31 /* list_down.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = list_down.png; sourceTree = "<group>"; };
+		7A0FBB3E1C3BC316004D3C31 /* list_integral.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = list_integral.png; sourceTree = "<group>"; };
+		7A0FBB3F1C3BC316004D3C31 /* list_like_heart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = list_like_heart.png; sourceTree = "<group>"; };
+		7A0FBB401C3BC316004D3C31 /* list_make_out.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = list_make_out.png; sourceTree = "<group>"; };
+		7A0FBB411C3BC316004D3C31 /* list_selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = list_selected.png; sourceTree = "<group>"; };
+		7A0FBB421C3BC316004D3C31 /* list_up.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = list_up.png; sourceTree = "<group>"; };
+		7A0FBB431C3BC316004D3C31 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
+		7A0FBB441C3BC316004D3C31 /* noselect.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = noselect.png; sourceTree = "<group>"; };
+		7A0FBB451C3BC316004D3C31 /* pos.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pos.png; sourceTree = "<group>"; };
+		7A0FBB461C3BC316004D3C31 /* red_shape.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = red_shape.png; sourceTree = "<group>"; };
+		7A0FBB471C3BC316004D3C31 /* select.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = select.png; sourceTree = "<group>"; };
+		7A0FBB481C3BC316004D3C31 /* shopping_trolley.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shopping_trolley.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -507,6 +627,7 @@
 		7A00D8931C3A4FBE00FA1077 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				7A0FBB0C1C3BC316004D3C31 /* drawable */,
 				7A0FBAFF1C3B6B84004D3C31 /* btn_search@2x.png */,
 				7A0FBAFD1C3B6B41004D3C31 /* btn_search.png */,
 				7A0FBAFB1C3B6A99004D3C31 /* 06-magnifying-glass.png */,
@@ -655,6 +776,73 @@
 			path = "30 2";
 			sourceTree = "<group>";
 		};
+		7A0FBB0C1C3BC316004D3C31 /* drawable */ = {
+			isa = PBXGroup;
+			children = (
+				7A0FBB0D1C3BC316004D3C31 /* btn_cover.png */,
+				7A0FBB0E1C3BC316004D3C31 /* btn_downarrow.png */,
+				7A0FBB0F1C3BC316004D3C31 /* btn_exchange.png */,
+				7A0FBB101C3BC316004D3C31 /* btn_nearby.png */,
+				7A0FBB111C3BC316004D3C31 /* btn_refresh.png */,
+				7A0FBB121C3BC316004D3C31 /* btn_screening.png */,
+				7A0FBB131C3BC316004D3C31 /* btn_search.png */,
+				7A0FBB141C3BC316004D3C31 /* btn_shezhi.png */,
+				7A0FBB151C3BC316004D3C31 /* btn_timetree.png */,
+				7A0FBB161C3BC316004D3C31 /* btn_uparrow.png */,
+				7A0FBB171C3BC316004D3C31 /* default_gouwu.png */,
+				7A0FBB181C3BC316004D3C31 /* default_yuer.png */,
+				7A0FBB191C3BC316004D3C31 /* ft_found_normal_ic.png */,
+				7A0FBB1A1C3BC316004D3C31 /* ft_found_selected_ic.png */,
+				7A0FBB1B1C3BC316004D3C31 /* ft_home_normal_ic.png */,
+				7A0FBB1C1C3BC316004D3C31 /* ft_home_selected_ic.png */,
+				7A0FBB1D1C3BC316004D3C31 /* ft_person_normal_ic.png */,
+				7A0FBB1E1C3BC316004D3C31 /* ft_person_selected_ic.png */,
+				7A0FBB1F1C3BC316004D3C31 /* home_huodong.png */,
+				7A0FBB201C3BC316004D3C31 /* home_icon_jingdin.png */,
+				7A0FBB211C3BC316004D3C31 /* home_icon_qinzi.png */,
+				7A0FBB221C3BC316004D3C31 /* home_icon_yanchu.png */,
+				7A0FBB231C3BC316004D3C31 /* home_icon_yizhi.png */,
+				7A0FBB241C3BC316004D3C31 /* home_recommd_rc.png */,
+				7A0FBB251C3BC316004D3C31 /* home_recommed_ac.png */,
+				7A0FBB261C3BC316004D3C31 /* home_zhuanti.png */,
+				7A0FBB271C3BC316004D3C31 /* ic_com_sina_weibo_sdk_button_blue_focused.9.png */,
+				7A0FBB281C3BC316004D3C31 /* ic_com_sina_weibo_sdk_button_blue_normal.9.png */,
+				7A0FBB291C3BC316004D3C31 /* ic_com_sina_weibo_sdk_button_blue_pressed.9.png */,
+				7A0FBB2A1C3BC316004D3C31 /* ic_com_sina_weibo_sdk_button_grey_focused.9.png */,
+				7A0FBB2B1C3BC316004D3C31 /* ic_com_sina_weibo_sdk_button_grey_normal.9.png */,
+				7A0FBB2C1C3BC316004D3C31 /* ic_com_sina_weibo_sdk_button_grey_pressed.9.png */,
+				7A0FBB2D1C3BC316004D3C31 /* ic_com_sina_weibo_sdk_login_button_with_frame_logo_focused.png */,
+				7A0FBB2E1C3BC316004D3C31 /* ic_com_sina_weibo_sdk_login_button_with_frame_logo_normal.png */,
+				7A0FBB2F1C3BC316004D3C31 /* ic_com_sina_weibo_sdk_login_button_with_frame_logo_pressed.png */,
+				7A0FBB301C3BC316004D3C31 /* ic_com_sina_weibo_sdk_login_with_account_text_focused.png */,
+				7A0FBB311C3BC316004D3C31 /* ic_com_sina_weibo_sdk_login_with_account_text_normal.png */,
+				7A0FBB321C3BC316004D3C31 /* ic_com_sina_weibo_sdk_login_with_account_text_pressed.png */,
+				7A0FBB331C3BC316004D3C31 /* ic_com_sina_weibo_sdk_logo.png */,
+				7A0FBB341C3BC316004D3C31 /* icon_ac.png */,
+				7A0FBB351C3BC316004D3C31 /* icon_ele.png */,
+				7A0FBB361C3BC316004D3C31 /* icon_like.png */,
+				7A0FBB371C3BC316004D3C31 /* icon_msg.png */,
+				7A0FBB381C3BC316004D3C31 /* icon_order.png */,
+				7A0FBB391C3BC316004D3C31 /* icon_ordered.png */,
+				7A0FBB3A1C3BC316004D3C31 /* icon_shop.png */,
+				7A0FBB3B1C3BC316004D3C31 /* icon_user.png */,
+				7A0FBB3C1C3BC316004D3C31 /* icon_weixin.png */,
+				7A0FBB3D1C3BC316004D3C31 /* list_down.png */,
+				7A0FBB3E1C3BC316004D3C31 /* list_integral.png */,
+				7A0FBB3F1C3BC316004D3C31 /* list_like_heart.png */,
+				7A0FBB401C3BC316004D3C31 /* list_make_out.png */,
+				7A0FBB411C3BC316004D3C31 /* list_selected.png */,
+				7A0FBB421C3BC316004D3C31 /* list_up.png */,
+				7A0FBB431C3BC316004D3C31 /* logo.png */,
+				7A0FBB441C3BC316004D3C31 /* noselect.png */,
+				7A0FBB451C3BC316004D3C31 /* pos.png */,
+				7A0FBB461C3BC316004D3C31 /* red_shape.png */,
+				7A0FBB471C3BC316004D3C31 /* select.png */,
+				7A0FBB481C3BC316004D3C31 /* shopping_trolley.png */,
+			);
+			path = drawable;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -716,17 +904,26 @@
 			buildActionMask = 2147483647;
 			files = (
 				7A00D92C1C3A5D1200FA1077 /* 18-envelope.png in Resources */,
+				7A0FBB5A1C3BC316004D3C31 /* ft_person_selected_ic.png in Resources */,
 				7A00D97E1C3A5D1200FA1077 /* tabBar.png in Resources */,
 				7A00D9781C3A5D1200FA1077 /* 94-pill.png in Resources */,
+				7A0FBB7F1C3BC316004D3C31 /* logo.png in Resources */,
 				7A00D9151C3A5D1200FA1077 /* 06-magnifying-glass.png in Resources */,
 				7A00D9621C3A5D1200FA1077 /* 72-pin.png in Resources */,
 				7A00DC6A1C3A65E300FA1077 /* ft_person_normal_ic@2x.png in Resources */,
+				7A0FBB5F1C3BC316004D3C31 /* home_icon_yizhi.png in Resources */,
+				7A0FBB491C3BC316004D3C31 /* btn_cover.png in Resources */,
 				7A00D96B1C3A5D1200FA1077 /* 81-dashboard.png in Resources */,
 				7A00D91D1C3A5D1200FA1077 /* 103-map.png in Resources */,
 				7A00D9111C3A5D1200FA1077 /* 02-redo.png in Resources */,
 				7A00D91F1C3A5D1200FA1077 /* 105-piano.png in Resources */,
 				7A00D9341C3A5D1200FA1077 /* 26-bandaid.png in Resources */,
+				7A0FBB7D1C3BC316004D3C31 /* list_selected.png in Resources */,
 				7A00D9241C3A5D1200FA1077 /* 11-clock.png in Resources */,
+				7A0FBB571C3BC316004D3C31 /* ft_home_normal_ic.png in Resources */,
+				7A0FBB4C1C3BC316004D3C31 /* btn_nearby.png in Resources */,
+				7A0FBB601C3BC316004D3C31 /* home_recommd_rc.png in Resources */,
+				7A0FBB841C3BC316004D3C31 /* shopping_trolley.png in Resources */,
 				7A00D97C1C3A5D1200FA1077 /* 98-palette.png in Resources */,
 				7A00D97B1C3A5D1200FA1077 /* 97-puzzle.png in Resources */,
 				7A00D9511C3A5D1200FA1077 /* 55-network.png in Resources */,
@@ -735,22 +932,33 @@
 				7A00D9301C3A5D1200FA1077 /* 22-skull-n-crossbones.png in Resources */,
 				7A00D94F1C3A5D1200FA1077 /* 53-house.png in Resources */,
 				7A00D9681C3A5D1200FA1077 /* 78-stopwatch.png in Resources */,
+				7A0FBB651C3BC316004D3C31 /* ic_com_sina_weibo_sdk_button_blue_pressed.9.png in Resources */,
 				7A00D96F1C3A5D1200FA1077 /* 85-trophy.png in Resources */,
 				7A00D92E1C3A5D1200FA1077 /* 20-gear2.png in Resources */,
+				7A0FBB621C3BC316004D3C31 /* home_zhuanti.png in Resources */,
 				7A00D9231C3A5D1200FA1077 /* 109-chicken.png in Resources */,
+				7A0FBB6F1C3BC316004D3C31 /* ic_com_sina_weibo_sdk_logo.png in Resources */,
 				7A00D9631C3A5D1200FA1077 /* 73-radar.png in Resources */,
+				7A0FBB4B1C3BC316004D3C31 /* btn_exchange.png in Resources */,
+				7A0FBB811C3BC316004D3C31 /* pos.png in Resources */,
+				7A0FBB5C1C3BC316004D3C31 /* home_icon_jingdin.png in Resources */,
 				7A00D96E1C3A5D1200FA1077 /* 84-lightbulb.png in Resources */,
 				7A00D9211C3A5D1200FA1077 /* 107-widescreen.png in Resources */,
 				7A00D93F1C3A5D1200FA1077 /* 37-suitcase.png in Resources */,
 				7A00DC651C3A65E300FA1077 /* ft_found_selected_ic@3x.png in Resources */,
+				7A0FBB641C3BC316004D3C31 /* ic_com_sina_weibo_sdk_button_blue_normal.9.png in Resources */,
+				7A0FBB581C3BC316004D3C31 /* ft_home_selected_ic.png in Resources */,
 				7A00D93C1C3A5D1200FA1077 /* 34-coffee.png in Resources */,
+				7A0FBB7E1C3BC316004D3C31 /* list_up.png in Resources */,
 				7A0FBB0B1C3BA4F6004D3C31 /* Property List.plist in Resources */,
 				7A00D9141C3A5D1200FA1077 /* 05-shuffle.png in Resources */,
 				7A00DC6D1C3A65E300FA1077 /* ft_person_selected_ic@3x.png in Resources */,
+				7A0FBB561C3BC316004D3C31 /* ft_found_selected_ic.png in Resources */,
 				7A00D93D1C3A5D1200FA1077 /* 35-shopping-bag.png in Resources */,
 				7A00D9191C3A5D1200FA1077 /* 10-medical.png in Resources */,
 				7A00D9741C3A5D1200FA1077 /* 90-lifebuoy.png in Resources */,
 				7A00D95C1C3A5D1200FA1077 /* 66-microphone.png in Resources */,
+				7A0FBB5E1C3BC316004D3C31 /* home_icon_yanchu.png in Resources */,
 				7A00DC621C3A65E200FA1077 /* ft_found_normal_ic@2x.png in Resources */,
 				7A00D9731C3A5D1200FA1077 /* 89-dumbbell.png in Resources */,
 				7A00D91E1C3A5D1200FA1077 /* 104-index-cards.png in Resources */,
@@ -775,41 +983,59 @@
 				7A00D95A1C3A5D1200FA1077 /* 64-zap.png in Resources */,
 				7A00D9711C3A5D1200FA1077 /* 87-wineglass.png in Resources */,
 				7A00D93A1C3A5D1200FA1077 /* 32-iphone.png in Resources */,
+				7A0FBB531C3BC316004D3C31 /* default_gouwu.png in Resources */,
 				7A00D9321C3A5D1200FA1077 /* 24-gift.png in Resources */,
 				7A00D96D1C3A5D1200FA1077 /* 83-calendar.png in Resources */,
 				7A00D9311C3A5D1200FA1077 /* 23-bird.png in Resources */,
+				7A0FBB4F1C3BC316004D3C31 /* btn_search.png in Resources */,
+				7A0FBB521C3BC316004D3C31 /* btn_uparrow.png in Resources */,
 				7A00D93E1C3A5D1200FA1077 /* 36-toolbox.png in Resources */,
 				7A00D95D1C3A5D1200FA1077 /* 67-tshirt.png in Resources */,
 				7A00D9431C3A5D1200FA1077 /* 41-picture-frame.png in Resources */,
 				7A00D9161C3A5D1200FA1077 /* 07-map-marker.png in Resources */,
+				7A0FBB4D1C3BC316004D3C31 /* btn_refresh.png in Resources */,
 				7A00D9611C3A5D1200FA1077 /* 71-compass.png in Resources */,
 				7A00D9551C3A5D1200FA1077 /* 59-flag.png in Resources */,
 				7A00D94D1C3A5D1200FA1077 /* 51-outlet.png in Resources */,
 				7A00D93B1C3A5D1200FA1077 /* 33-cabinet.png in Resources */,
 				7A00D9201C3A5D1200FA1077 /* 106-sliders.png in Resources */,
+				7A0FBB6C1C3BC316004D3C31 /* ic_com_sina_weibo_sdk_login_with_account_text_focused.png in Resources */,
+				7A0FBB751C3BC316004D3C31 /* icon_ordered.png in Resources */,
 				7A00DC631C3A65E200FA1077 /* ft_found_normal_ic@3x.png in Resources */,
+				7A0FBB681C3BC316004D3C31 /* ic_com_sina_weibo_sdk_button_grey_pressed.9.png in Resources */,
 				7A00D9421C3A5D1200FA1077 /* 40-inbox.png in Resources */,
 				7A00D8971C3A50A300FA1077 /* Main.Storyboard in Resources */,
 				7A00D9401C3A5D1200FA1077 /* 38-airplane.png in Resources */,
 				7A00D9721C3A5D1200FA1077 /* 88-beermug.png in Resources */,
 				7A00D9701C3A5D1200FA1077 /* 86-camera.png in Resources */,
 				7A00D9251C3A5D1200FA1077 /* 110-bug.png in Resources */,
+				7A0FBB6E1C3BC316004D3C31 /* ic_com_sina_weibo_sdk_login_with_account_text_pressed.png in Resources */,
 				7A00D9541C3A5D1200FA1077 /* 58-bookmark.png in Resources */,
+				7A0FBB551C3BC316004D3C31 /* ft_found_normal_ic.png in Resources */,
 				7A00DC661C3A65E300FA1077 /* ft_home_normal_ic@2x.png in Resources */,
 				7A00D9471C3A5D1200FA1077 /* 45-movie1.png in Resources */,
+				7A0FBB661C3BC316004D3C31 /* ic_com_sina_weibo_sdk_button_grey_focused.9.png in Resources */,
+				7A0FBB501C3BC316004D3C31 /* btn_shezhi.png in Resources */,
 				7A00D9641C3A5D1200FA1077 /* 74-location.png in Resources */,
 				7A00D9291C3A5D1200FA1077 /* 15-tags.png in Resources */,
 				7A0FBB001C3B6B84004D3C31 /* btn_search@2x.png in Resources */,
+				7A0FBB731C3BC316004D3C31 /* icon_msg.png in Resources */,
 				7A00D9361C3A5D1200FA1077 /* 28-star.png in Resources */,
+				7A0FBB801C3BC316004D3C31 /* noselect.png in Resources */,
+				7A0FBB7B1C3BC316004D3C31 /* list_like_heart.png in Resources */,
 				7A00D92D1C3A5D1200FA1077 /* 19-gear.png in Resources */,
+				7A0FBB781C3BC316004D3C31 /* icon_weixin.png in Resources */,
 				7A00D9521C3A5D1200FA1077 /* 56-cloud.png in Resources */,
 				7A00D9651C3A5D1200FA1077 /* 75-phone.png in Resources */,
+				7A0FBB611C3BC316004D3C31 /* home_recommed_ac.png in Resources */,
 				7A00D9791C3A5D1200FA1077 /* 95-equalizer.png in Resources */,
 				7A00D9671C3A5D1200FA1077 /* 77-ekg.png in Resources */,
 				7A00D94C1C3A5D1200FA1077 /* 50-beaker.png in Resources */,
+				7A0FBB691C3BC316004D3C31 /* ic_com_sina_weibo_sdk_login_button_with_frame_logo_focused.png in Resources */,
 				7A00D9351C3A5D1200FA1077 /* 27-planet.png in Resources */,
 				7A00D97D1C3A5D1200FA1077 /* 99-umbrella.png in Resources */,
 				7A00D9461C3A5D1200FA1077 /* 44-shoebox.png in Resources */,
+				7A0FBB5D1C3BC316004D3C31 /* home_icon_qinzi.png in Resources */,
 				7A00D9371C3A5D1200FA1077 /* 29-heart.png in Resources */,
 				7A00D96C1C3A5D1200FA1077 /* 82-dogpaw.png in Resources */,
 				7A00D94A1C3A5D1200FA1077 /* 48-fork-and-knife.png in Resources */,
@@ -821,33 +1047,55 @@
 				7A00D9261C3A5D1200FA1077 /* 12-eye.png in Resources */,
 				7A00D9531C3A5D1200FA1077 /* 57-download.png in Resources */,
 				7A00D8991C3A50BD00FA1077 /* Discover.Storyboard in Resources */,
+				7A0FBB6D1C3BC316004D3C31 /* ic_com_sina_weibo_sdk_login_with_account_text_normal.png in Resources */,
+				7A0FBB721C3BC316004D3C31 /* icon_like.png in Resources */,
 				7A0FBAFC1C3B6A99004D3C31 /* 06-magnifying-glass.png in Resources */,
 				7A00D9121C3A5D1200FA1077 /* 03-loopback.png in Resources */,
+				7A0FBB821C3BC316004D3C31 /* red_shape.png in Resources */,
 				7A00D85C1C3A1C4800FA1077 /* Assets.xcassets in Resources */,
 				7A00D9591C3A5D1200FA1077 /* 63-runner.png in Resources */,
 				7A00D9171C3A5D1200FA1077 /* 08-chat.png in Resources */,
+				7A0FBB701C3BC316004D3C31 /* icon_ac.png in Resources */,
 				7A00D9131C3A5D1200FA1077 /* 04-squiggle.png in Resources */,
+				7A0FBB671C3BC316004D3C31 /* ic_com_sina_weibo_sdk_button_grey_normal.9.png in Resources */,
+				7A0FBB741C3BC316004D3C31 /* icon_order.png in Resources */,
 				7A00D9571C3A5D1200FA1077 /* 61-brightness.png in Resources */,
 				7A00D9491C3A5D1200FA1077 /* 47-fuel.png in Resources */,
+				7A0FBB711C3BC316004D3C31 /* icon_ele.png in Resources */,
 				7A00DC671C3A65E300FA1077 /* ft_home_normal_ic@3x.png in Resources */,
+				7A0FBB541C3BC316004D3C31 /* default_yuer.png in Resources */,
+				7A0FBB4A1C3BC316004D3C31 /* btn_downarrow.png in Resources */,
 				7A00D94B1C3A5D1200FA1077 /* 49-battery.png in Resources */,
+				7A0FBB761C3BC316004D3C31 /* icon_shop.png in Resources */,
+				7A0FBB6B1C3BC316004D3C31 /* ic_com_sina_weibo_sdk_login_button_with_frame_logo_pressed.png in Resources */,
 				7A00DC681C3A65E300FA1077 /* ft_home_selected_ic@2x.png in Resources */,
 				7A00D92B1C3A5D1200FA1077 /* 17-bar-chart.png in Resources */,
 				7A00D9771C3A5D1200FA1077 /* 93-thermometer.png in Resources */,
 				7A00D9501C3A5D1200FA1077 /* 54-lock.png in Resources */,
+				7A0FBB791C3BC316004D3C31 /* list_down.png in Resources */,
+				7A0FBB5B1C3BC316004D3C31 /* home_huodong.png in Resources */,
 				7A00D9281C3A5D1200FA1077 /* 14-tag.png in Resources */,
+				7A0FBB7A1C3BC316004D3C31 /* list_integral.png in Resources */,
 				7A00D91B1C3A5D1200FA1077 /* 101-gameplan.png in Resources */,
+				7A0FBB6A1C3BC316004D3C31 /* ic_com_sina_weibo_sdk_login_button_with_frame_logo_normal.png in Resources */,
+				7A0FBB511C3BC316004D3C31 /* btn_timetree.png in Resources */,
 				7A00D9451C3A5D1200FA1077 /* 43-film-roll.png in Resources */,
 				7A00D9481C3A5D1200FA1077 /* 46-movie2.png in Resources */,
 				7A00D85F1C3A1C4800FA1077 /* LaunchScreen.storyboard in Resources */,
+				7A0FBB7C1C3BC316004D3C31 /* list_make_out.png in Resources */,
 				7A00D9751C3A5D1200FA1077 /* 91-beaker2.png in Resources */,
 				7A00DC641C3A65E200FA1077 /* ft_found_selected_ic@2x.png in Resources */,
 				7A00D92F1C3A5D1200FA1077 /* 21-skull.png in Resources */,
+				7A0FBB591C3BC316004D3C31 /* ft_person_normal_ic.png in Resources */,
 				7A00D95F1C3A5D1200FA1077 /* 69-display.png in Resources */,
+				7A0FBB4E1C3BC316004D3C31 /* btn_screening.png in Resources */,
 				7A00D92A1C3A5D1200FA1077 /* 16-line-chart.png in Resources */,
 				7A00DC6B1C3A65E300FA1077 /* ft_person_normal_ic@3x.png in Resources */,
+				7A0FBB631C3BC316004D3C31 /* ic_com_sina_weibo_sdk_button_blue_focused.9.png in Resources */,
 				7A00D9761C3A5D1200FA1077 /* 92-testtube.png in Resources */,
+				7A0FBB831C3BC316004D3C31 /* select.png in Resources */,
 				7A00D9331C3A5D1200FA1077 /* 25-weather.png in Resources */,
+				7A0FBB771C3BC316004D3C31 /* icon_user.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
