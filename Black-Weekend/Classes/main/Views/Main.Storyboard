@@ -14,16 +14,29 @@
                         <viewControllerLayoutGuide type="bottom" id="FHG-hi-jD7"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="6Iq-ts-ED5">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="kZt-08-tz8">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="EyK-Qk-cgH" id="San-Kx-Eby"/>
+                                    <outlet property="delegate" destination="EyK-Qk-cgH" id="Ifb-zW-3Wf"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="0.66459958649999995" blue="0.63732134259999995" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <navigationItem key="navigationItem" title="欢乐周末" id="9QF-vm-eRn"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="tableView" destination="kZt-08-tz8" id="Cqi-7V-UpW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d8u-xH-8SD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="494.5" y="456.5"/>
+            <point key="canvasLocation" x="313.5" y="458.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="EYs-ov-qzW">
@@ -31,9 +44,14 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="b8f-gN-Epd" sceneMemberID="viewController">
                     <toolbarItems/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Gez-oJ-ODN">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="Gez-oJ-ODN">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.10980392156862745" green="0.72549019607843135" blue="0.74901960784313726" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="0.98273123755828429" green="1" blue="0.98429558183579691" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
+                            <color key="textShadowColor" red="1" green="1" blue="1" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -42,7 +60,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BtL-by-DPB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="89.5" y="456.5"/>
+            <point key="canvasLocation" x="-94.5" y="458.5"/>
         </scene>
     </scenes>
 </document>
