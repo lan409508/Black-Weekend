@@ -18,18 +18,8 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.title = @"精选活动";
-    self.view.backgroundColor = [UIColor whiteColor];
-    UIButton *backBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-    backBtn.frame = CGRectMake(0, 0, 44, 44);
-    [backBtn setImage:[UIImage imageNamed:@"back"] forState:UIControlStateNormal];
-    [backBtn addTarget:self action:@selector(back) forControlEvents:UIControlEventTouchUpInside];
-    UIBarButtonItem *leftBarBtn = [[UIBarButtonItem alloc]initWithCustomView:backBtn];
-    self.navigationItem.leftBarButtonItem = leftBarBtn;
+    
     [self showBackButton];
-}
-
-- (void)back{
-    [self.navigationController popToRootViewControllerAnimated:YES];
 }
 
 - (void)didReceiveMemoryWarning {

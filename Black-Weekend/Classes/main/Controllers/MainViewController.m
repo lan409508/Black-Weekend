@@ -49,9 +49,14 @@
     // Do any additional setup after loading the view.
 
     //left
-    UIBarButtonItem *leftBarBtn = [[UIBarButtonItem alloc] initWithTitle:@"北京" style:UIBarButtonItemStylePlain target:self action:@selector(selectCityAction:)];
-    leftBarBtn.tintColor = [UIColor whiteColor];
-    self.navigationItem.leftBarButtonItem = leftBarBtn;
+    UIButton *leftBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    leftBtn.frame = CGRectMake(0, 0, 44, 44);
+    [leftBtn setTitle:@"北京" forState:UIControlStateNormal];
+    [leftBtn addTarget:self action:@selector(selectCityAction:) forControlEvents:UIControlEventTouchUpInside];
+//    UIBarButtonItem *leftBarBtn = [[UIBarButtonItem alloc] initWithTitle:@"北京" style:UIBarButtonItemStylePlain target:self action:@selector(selectCityAction:)];
+//    leftBarBtn.tintColor = [UIColor whiteColor];
+    UIBarButtonItem *leftBarbtn = [[UIBarButtonItem alloc]initWithCustomView:leftBtn];
+    self.navigationItem.leftBarButtonItem = leftBarbtn;
     
     //right
     UIButton *rightBtn = [UIButton buttonWithType:UIButtonTypeCustom];
@@ -133,7 +138,7 @@
 //选择城市
 - (void)selectCityAction:(UIBarButtonItem *)barBtn{
     SelectViewController *selectCityVC = [[SelectViewController alloc]init];
-    [self presentViewController:selectCityVC animated:YES completion:nil];
+    [self.navigationController pushViewController:selectCityVC animated:YES];
 }
 
 //搜索关键字

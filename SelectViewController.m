@@ -18,7 +18,9 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.title = @"切换城市";
-    self.view.backgroundColor = [UIColor lightGrayColor];
+    self.view.backgroundColor = [UIColor whiteColor];
+    
+    [self showBackButton];
 }
 
 - (void)didReceiveMemoryWarning {
