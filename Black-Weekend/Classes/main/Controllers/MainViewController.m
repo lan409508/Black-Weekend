@@ -11,8 +11,15 @@
 #import <AFNetworking/AFHTTPSessionManager.h>
 #import "MainModel.h"
 #import <SDWebImage/UIImageView+WebCache.h>
+#import "SelectViewController.h"
+#import "SearchViewController.h"
+#import "ActivityDetailViewController.h"
+#import "ThemeViewController.h"
+#import "ClassifyViewController.h"
+#import "ActivityViewController.h"
+#import "HotViewController.h"
 
-@interface MainViewController ()<UITableViewDataSource,UITableViewDelegate>
+@interface MainViewController ()<UITableViewDataSource,UITableViewDelegate,UIScrollViewDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 //全部列表数组
 @property (nonatomic, strong) NSMutableArray *listArray;
@@ -22,6 +29,10 @@
 @property (nonatomic, strong) NSMutableArray *themeArray;
 //广告数组
 @property (nonatomic, strong) NSMutableArray *adArray;
+
+@property (nonatomic, strong) UIScrollView *scrollView;
+
+@property (nonatomic, strong) UIPageControl *pageControl;
 
 @end
 
@@ -39,7 +50,7 @@
     //right
     UIButton *rightBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     rightBtn.frame = CGRectMake(0, 0, 20, 20);
-    [rightBtn setImage: [UIImage imageNamed: @"btn_search@2x.png"] forState:UIControlStateNormal];
+    [rightBtn setImage: [UIImage imageNamed: @"btn_search.png"] forState:UIControlStateNormal];
     [rightBtn addTarget:self action:@selector(searchActivityAction:) forControlEvents:UIControlEventTouchUpInside];
     UIBarButtonItem *rightBarbtn = [[UIBarButtonItem alloc]initWithCustomView:rightBtn];
     self.navigationItem.rightBarButtonItem = rightBarbtn;
@@ -99,20 +110,28 @@
     return view;
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    if (indexPath.section == 0) {
+        ActivityDetailViewController *activityVC = [[ActivityDetailViewController alloc]init];
+        [self.navigationController pushViewController:activityVC animated:YES];
+    } else {
+        ThemeViewController *themeVC = [[ThemeViewController alloc]init];
+        [self.navigationController pushViewController:themeVC animated:YES];
+    }
 }
+
 
 #pragma mark -------- Custom Method
 //选择城市
 - (void)selectCityAction:(UIBarButtonItem *)barBtn{
-    
+    SelectViewController *selectCityVC = [[SelectViewController alloc]init];
+    [self presentViewController:selectCityVC animated:YES completion:nil];
 }
 
 //搜索关键字
 - (void)searchActivityAction:(UIButton *)btn {
-    
+    SearchViewController *searchVC = [[SearchViewController alloc]init];
+    [self.navigationController pushViewController:searchVC animated:YES];
 }
 
 //自定义TableView头部
@@ -120,14 +139,28 @@
     UIView *tableViewHeaderView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, 343)];
     self.tableView.tableHeaderView = tableViewHeaderView;
     //添加轮播图
-    UIScrollView *scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, 186)];
-    scrollView.contentSize = CGSizeMake(self.adArray.count *[UIScreen mainScreen].bounds.size.width, 186);
+    self.scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, 186)];
+    self.scrollView.contentSize = CGSizeMake(self.adArray.count *[UIScreen mainScreen].bounds.size.width, 186);
+    //整屏滑动
+    self.scrollView.pagingEnabled = YES;
+    //不显示水平滚动条
+    self.scrollView.showsHorizontalScrollIndicator = NO;
+    self.scrollView.delegate = self;
+    //创建小圆点
+    self.pageControl = [[UIPageControl alloc]initWithFrame:CGRectMake(0, 156, kScreenWidth, 30)];
+    //小圆点个数
+    self.pageControl.numberOfPages = self.adArray.count;
+    self.pageControl.currentPageIndicatorTintColor = [UIColor cyanColor];
+    [self.pageControl addTarget:self action:@selector(pageSelectAction:) forControlEvents:UIControlEventValueChanged];
+    
+    
+    
     for (int i = 0;i < self.adArray.count ; i++) {
         UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake([UIScreen mainScreen].bounds.size.width * i, 0, [UIScreen mainScreen].bounds.size.width, 186)];
         [imageView sd_setImageWithURL:[NSURL URLWithString:self.adArray[i]] placeholderImage:nil];
-        [scrollView addSubview:imageView];
+        [self.scrollView addSubview:imageView];
     }
-    [tableViewHeaderView addSubview:scrollView];
+    [tableViewHeaderView addSubview:self.scrollView];
     
    //按钮
     for (int i = 0; i < 4; i++) {
@@ -138,6 +171,7 @@
         btn.tag = 100 + i;
         [btn addTarget:self action:@selector(mainActivityButtonAction:) forControlEvents:UIControlEventTouchUpInside];
         [tableViewHeaderView addSubview:btn];
+        [tableViewHeaderView addSubview:self.pageControl];
     }
     //精选活动&热门活动
     UIButton *activityBtn = [UIButton buttonWithType:UIButtonTypeCustom];
@@ -206,16 +240,23 @@
     }];
 }
 #pragma mark --------- 按钮实现方法
+
+//分类列表
 - (void)mainActivityButtonAction:(UIButton *)btn{
-    
+    ClassifyViewController *classifyVC = [[ClassifyViewController alloc]init];
+    [self.navigationController pushViewController:classifyVC animated:YES];
 }
 
+//精选活动
 - (void)activityButtonAction{
-    
+    ActivityViewController *activityVC = [[ActivityViewController alloc]init];
+    [self.navigationController pushViewController:activityVC animated:YES];
 }
 
+//热门专题
 - (void)hotButtonAction{
-    
+    HotViewController *hotVC = [[HotViewController alloc]init];
+    [self.navigationController pushViewController:hotVC animated:YES];
 }
 
 #pragma mark -------- lazyLoading
@@ -246,6 +287,35 @@
         self.adArray = [NSMutableArray new];
     }
     return _adArray;
+}
+
+#pragma mark ------- 首页轮播图
+
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView{
+    //获取scrollView页面的宽度
+    CGFloat pageWidth = self.scrollView.frame.size.width;
+    //获取scrollView停止时候的偏移量
+    //contentOffset是当前scrollView距离原点偏移的位置
+    CGPoint offset = self.scrollView.contentOffset;
+    //通过偏移量计算出当前的页数
+    NSInteger pageNum = offset.x / pageWidth;
+    self.pageControl.currentPage = pageNum;
+}
+
+- (void)pageSelectAction:(UIPageControl *)pageControl{
+    //获取scrollView页面的宽度
+    NSInteger pageNumber = pageControl.currentPage;
+    //获取scrollView停止时候的偏移量
+    //contentOffset是当前scrollView距离原点偏移的位置
+    CGFloat pageWidth = self.scrollView.frame.size.width;
+    //让小圆点滑动到第几页
+    self.scrollView.contentOffset = CGPointMake(pageNumber * pageWidth, 0);
+}
+
+
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
 }
 
 /*

@@ -27,7 +27,11 @@
     [self.activityImageView sd_setImageWithURL:[NSURL URLWithString:mainModel.iamge_big] placeholderImage:nil];
     self.activityNameLabel.text = mainModel.title;
     self.activityPrice.text = mainModel.price;
-    //[self.activityDistanceBtn setTitle:<#(nullable NSString *)#> forState:<#(UIControlState)#>];
+    if ([mainModel.type integerValue ] != RecommendTypeActivity ) {
+        self.activityDistanceBtn.hidden = YES;
+    } else {
+        self.activityDistanceBtn.hidden = NO;
+    }
     
 }
 

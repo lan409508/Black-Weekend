@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:HWDefine.h">
+   </FileRef>
+   <FileRef
       location = "group:Black-Weekend.xcodeproj">
    </FileRef>
    <FileRef
