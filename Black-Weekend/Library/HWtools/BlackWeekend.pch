@@ -13,14 +13,16 @@
 // You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
 
 #import "HWDefine.h"
+#import "UIViewController+Common.h"
+
 #define kScreenWidth  [UIScreen mainScreen].bounds.size.width
 #define kScreenHeight [UIScreen mainScreen].bounds.size.height
 
 
 #ifdef DEBUG
-#	define GYRLog(fmt, ...) NSLog((@"%s [Line %d] " fmt), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__);
+#	define LXJLog(fmt, ...) NSLog((@"%s [Line %d] " fmt), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__);
 #else
-#	define GYRLog(...)
+#	define :LXJLog(...)
 #endif
 
 #endif /* BlackWeekend_pch */

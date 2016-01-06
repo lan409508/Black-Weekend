@@ -1,5 +1,5 @@
 //
-//  ActivityDetailViewController.h
+//  UIViewController+Common.h
 //  Black-Weekend
 //
 //  Created by scjy on 16/1/6.
@@ -8,8 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ActivityDetailViewController : UIViewController
+@interface UIViewController (Common)
 
-@property (nonatomic, copy) NSString *activityId;
+- (void)showBackButton;
 
 @end
