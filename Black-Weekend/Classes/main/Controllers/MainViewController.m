@@ -116,9 +116,13 @@
     UIImageView *sectionView = [[UIImageView alloc]initWithFrame:CGRectMake([UIScreen mainScreen].bounds.size.width/2 - 160, 5, 320, 16)];
     if (section == 0) {
         sectionView.image = [UIImage imageNamed:@"home_recommed_ac"];
+        LXJLog(@"%@",sectionView.image);
     }else{
-        sectionView.image = [UIImage imageNamed:@"home_recommed_rc"];
+        sectionView.image = [UIImage imageNamed:@"home_recommd_rc"];
+        LXJLog(@"%@",sectionView.image);
     }
+    LXJLog(@"%ld",section);
+
     [view addSubview:sectionView];
     return view;
 }
@@ -211,21 +215,21 @@
         NSInteger code = [resultDic[@"code"] integerValue];
         if ([status isEqualToString:@"success"] && code == 0) {
             NSDictionary *dic = resultDic[@"success"];
-            //推荐活动
+//            //推荐活动
             NSArray *acDataArray = dic[@"acData"];
             for (NSDictionary *dict in acDataArray) {
                 MainModel *model = [[MainModel alloc]initWithDictionary:dict];
                 [self.activityArray addObject:model];
             }
             [self.listArray addObject:self.activityArray];
-            
             //推荐专题
             NSArray *rcDataArray = dic[@"rcData"];
-            for (NSDictionary *dict in rcDataArray) {
-                MainModel *model = [[MainModel alloc]initWithDictionary:dict];
+            for (NSDictionary *dict1 in rcDataArray) {
+                MainModel *model = [[MainModel alloc]initWithDictionary:dict1];
                 [self.themeArray addObject:model];
             }
             [self.listArray addObject:self.themeArray];
+            NSLog(@"%@",self.listArray);
             //刷新tableView数据
             [self.tableView reloadData];
             //广告

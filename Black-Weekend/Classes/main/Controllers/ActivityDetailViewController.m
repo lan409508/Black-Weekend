@@ -12,6 +12,10 @@
 #import "ActivityDetailView.h"
 @interface ActivityDetailViewController ()
 
+{
+    NSString *_phoneNumber;
+}
+
 @property (strong, nonatomic) IBOutlet ActivityDetailView *activityDetailView;
 
 
@@ -26,7 +30,12 @@
     self.view.backgroundColor = [UIColor whiteColor];
     self.title = @"活动详情";
     [self showBackButton];
-   
+    
+    //去地图页面
+    
+    //打电话
+    [self.activityDetailView.makeCallButton addTarget:self action:@selector(makeCallButtonAction:) forControlEvents:UIControlEventTouchUpInside
+     ];
     [self getModel];
 }
 
@@ -47,7 +56,8 @@
             
             NSDictionary *successDic = dic[@"success"]; 
             self.activityDetailView.dataDic = successDic;
-        
+            _phoneNumber = dic[@"tel"];
+            
         } else {
             
         }
@@ -58,6 +68,23 @@
     }];
 }
 
+//去地图页
+- (void)mapButtonAction:(UIButton *)btn{
+    
+}
+
+//打电话
+- (void)makeCallButtonAction:(UIButton *)btn {
+    //程序外打电话，打完电话之后不返回当前应用程序
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:[NSString stringWithFormat:@"tel://%@",_phoneNumber]]];
+    
+    
+    //程序内打电话，打完电话之后返回当前应用程序
+    UIWebView *cellphoneWebView = [[UIWebView alloc]init];
+    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"tel://%@",_phoneNumber]]];
+    [cellphoneWebView loadRequest:request];
+    [self.view addSubview:cellphoneWebView];
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

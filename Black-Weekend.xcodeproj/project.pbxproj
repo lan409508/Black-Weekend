@@ -145,9 +145,11 @@
 		7A0FBB041C3BA052004D3C31 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A0FBB031C3BA052004D3C31 /* AVFoundation.framework */; };
 		7A0FBB071C3BA081004D3C31 /* MainModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A0FBB061C3BA081004D3C31 /* MainModel.m */; };
 		7A0FBB0B1C3BA4F6004D3C31 /* Property List.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7A0FBB0A1C3BA4F6004D3C31 /* Property List.plist */; };
-		7A49F7331C3D1B280030159E /* File in Resources */ = {isa = PBXBuildFile; fileRef = 7A49F7321C3D1B280030159E /* File */; };
 		7A49F7361C3D20180030159E /* UIViewController+Common.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A49F7351C3D20180030159E /* UIViewController+Common.m */; };
 		7AEE72211C3E10DA00786925 /* ActivityDetailView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AEE72201C3E10DA00786925 /* ActivityDetailView.m */; };
+		7AEE72241C3E4C2500786925 /* HWTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AEE72231C3E4C2500786925 /* HWTools.m */; };
+		7AEE72271C3E5B0800786925 /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AEE72261C3E5B0800786925 /* UIView+Extension.m */; };
+		7AEE72291C3E695200786925 /* File in Resources */ = {isa = PBXBuildFile; fileRef = 7AEE72281C3E695200786925 /* File */; };
 		7AF98FEE1C3CBC14009855D2 /* SelectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AF98FED1C3CBC14009855D2 /* SelectViewController.m */; };
 		7AF98FF11C3CBD9A009855D2 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AF98FF01C3CBD9A009855D2 /* SearchViewController.m */; };
 		7AF98FF41C3CBE84009855D2 /* ActivityDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AF98FF31C3CBE84009855D2 /* ActivityDetailViewController.m */; };
@@ -164,8 +166,8 @@
 		63B2E4E066E35A8EBF073526 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		7A00D8521C3A1C4800FA1077 /* Black-Weekend.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Black-Weekend.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A00D8561C3A1C4800FA1077 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		7A00D8581C3A1C4800FA1077 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		7A00D8591C3A1C4800FA1077 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		7A00D8581C3A1C4800FA1077 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = ../../AppDelegate.h; sourceTree = "<group>"; };
+		7A00D8591C3A1C4800FA1077 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = ../../AppDelegate.m; sourceTree = "<group>"; };
 		7A00D85B1C3A1C4800FA1077 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7A00D85E1C3A1C4800FA1077 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7A00D8601C3A1C4800FA1077 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -308,11 +310,15 @@
 		7A0FBB051C3BA081004D3C31 /* MainModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainModel.h; sourceTree = "<group>"; };
 		7A0FBB061C3BA081004D3C31 /* MainModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainModel.m; sourceTree = "<group>"; };
 		7A0FBB0A1C3BA4F6004D3C31 /* Property List.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Property List.plist"; sourceTree = "<group>"; };
-		7A49F7321C3D1B280030159E /* File */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = File; path = ../Controllers/File; sourceTree = "<group>"; };
 		7A49F7341C3D20180030159E /* UIViewController+Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIViewController+Common.h"; path = "../../Classes/main/Controllers/UIViewController+Common.h"; sourceTree = "<group>"; };
 		7A49F7351C3D20180030159E /* UIViewController+Common.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIViewController+Common.m"; path = "../../Classes/main/Controllers/UIViewController+Common.m"; sourceTree = "<group>"; };
 		7AEE721F1C3E10DA00786925 /* ActivityDetailView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActivityDetailView.h; sourceTree = "<group>"; };
 		7AEE72201C3E10DA00786925 /* ActivityDetailView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActivityDetailView.m; sourceTree = "<group>"; };
+		7AEE72221C3E4C2500786925 /* HWTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HWTools.h; path = ../../Classes/main/Views/HWTools.h; sourceTree = "<group>"; };
+		7AEE72231C3E4C2500786925 /* HWTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HWTools.m; path = ../../Classes/main/Views/HWTools.m; sourceTree = "<group>"; };
+		7AEE72251C3E5B0800786925 /* UIView+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Extension.h"; sourceTree = "<group>"; };
+		7AEE72261C3E5B0800786925 /* UIView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
+		7AEE72281C3E695200786925 /* File */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = File; sourceTree = "<group>"; };
 		7AF98FE91C3CB56A009855D2 /* BlackWeekend.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BlackWeekend.pch; sourceTree = "<group>"; };
 		7AF98FEB1C3CB6BC009855D2 /* HWDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HWDefine.h; sourceTree = "<group>"; };
 		7AF98FEC1C3CBC14009855D2 /* SelectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SelectViewController.h; path = ../../../../SelectViewController.h; sourceTree = "<group>"; };
@@ -387,8 +393,6 @@
 				7A00D8921C3A4E4B00FA1077 /* Library */,
 				7A00D8931C3A4FBE00FA1077 /* Resources */,
 				7AF98FE81C3CB532009855D2 /* HWtools */,
-				7A00D8581C3A1C4800FA1077 /* AppDelegate.h */,
-				7A00D8591C3A1C4800FA1077 /* AppDelegate.m */,
 				7A00D85B1C3A1C4800FA1077 /* Assets.xcassets */,
 				7A00D85D1C3A1C4800FA1077 /* LaunchScreen.storyboard */,
 				7A00D8601C3A1C4800FA1077 /* Info.plist */,
@@ -485,7 +489,7 @@
 		7A00D8871C3A4E4100FA1077 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				7A49F7321C3D1B280030159E /* File */,
+				7AEE72281C3E695200786925 /* File */,
 				7A0FBB051C3BA081004D3C31 /* MainModel.h */,
 				7A0FBB061C3BA081004D3C31 /* MainModel.m */,
 				7A0FBB0A1C3BA4F6004D3C31 /* Property List.plist */,
@@ -502,6 +506,8 @@
 				7A00DC701C3A766800FA1077 /* MainTableViewCell.xib */,
 				7AEE721F1C3E10DA00786925 /* ActivityDetailView.h */,
 				7AEE72201C3E10DA00786925 /* ActivityDetailView.m */,
+				7AEE72251C3E5B0800786925 /* UIView+Extension.h */,
+				7AEE72261C3E5B0800786925 /* UIView+Extension.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -550,6 +556,8 @@
 		7A00D8931C3A4FBE00FA1077 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				7A00D8581C3A1C4800FA1077 /* AppDelegate.h */,
+				7A00D8591C3A1C4800FA1077 /* AppDelegate.m */,
 				7A00DC551C3A65E200FA1077 /* 30 2 */,
 				7A00D8A01C3A5D1200FA1077 /* icons */,
 			);
@@ -702,6 +710,8 @@
 				7A49F7351C3D20180030159E /* UIViewController+Common.m */,
 				7AF98FEB1C3CB6BC009855D2 /* HWDefine.h */,
 				7AF98FE91C3CB56A009855D2 /* BlackWeekend.pch */,
+				7AEE72221C3E4C2500786925 /* HWTools.h */,
+				7AEE72231C3E4C2500786925 /* HWTools.m */,
 			);
 			name = HWtools;
 			path = Library/HWtools;
@@ -882,7 +892,7 @@
 				7A00D94B1C3A5D1200FA1077 /* 49-battery.png in Resources */,
 				7A00DC681C3A65E300FA1077 /* ft_home_selected_ic@2x.png in Resources */,
 				7A00D92B1C3A5D1200FA1077 /* 17-bar-chart.png in Resources */,
-				7A49F7331C3D1B280030159E /* File in Resources */,
+				7AEE72291C3E695200786925 /* File in Resources */,
 				7A00D9771C3A5D1200FA1077 /* 93-thermometer.png in Resources */,
 				7A00D9501C3A5D1200FA1077 /* 54-lock.png in Resources */,
 				7A00D9281C3A5D1200FA1077 /* 14-tag.png in Resources */,
@@ -956,6 +966,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7AEE72271C3E5B0800786925 /* UIView+Extension.m in Sources */,
+				7AEE72241C3E4C2500786925 /* HWTools.m in Sources */,
 				7AF98FFA1C3CBFFB009855D2 /* ClassifyViewController.m in Sources */,
 				7AF98FEE1C3CBC14009855D2 /* SelectViewController.m in Sources */,
 				7A00DC711C3A766800FA1077 /* MainTableViewCell.m in Sources */,
