@@ -751,6 +751,7 @@
 				TargetAttributes = {
 					7A00D8511C3A1C4800FA1077 = {
 						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = DE92S34P85;
 					};
 				};
 			};
@@ -1086,6 +1087,8 @@
 			baseConfigurationReference = 63B2E4E066E35A8EBF073526 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/Black-Weekend/Library/HWtools/BlackWeekend.pch";
 				INFOPLIST_FILE = "Black-Weekend/Info.plist";
@@ -1093,6 +1096,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "can.Mangoinc.Black-Weekend";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -1101,6 +1105,8 @@
 			baseConfigurationReference = 178F65ED557D70289BD74353 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/Black-Weekend/Library/HWtools/BlackWeekend.pch";
 				INFOPLIST_FILE = "Black-Weekend/Info.plist";
@@ -1108,6 +1114,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "can.Mangoinc.Black-Weekend";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

@@ -53,8 +53,6 @@
     leftBtn.frame = CGRectMake(0, 0, 44, 44);
     [leftBtn setTitle:@"北京" forState:UIControlStateNormal];
     [leftBtn addTarget:self action:@selector(selectCityAction:) forControlEvents:UIControlEventTouchUpInside];
-//    UIBarButtonItem *leftBarBtn = [[UIBarButtonItem alloc] initWithTitle:@"北京" style:UIBarButtonItemStylePlain target:self action:@selector(selectCityAction:)];
-//    leftBarBtn.tintColor = [UIColor whiteColor];
     UIBarButtonItem *leftBarbtn = [[UIBarButtonItem alloc]initWithCustomView:leftBtn];
     self.navigationItem.leftBarButtonItem = leftBarbtn;
     
@@ -116,12 +114,9 @@
     UIImageView *sectionView = [[UIImageView alloc]initWithFrame:CGRectMake([UIScreen mainScreen].bounds.size.width/2 - 160, 5, 320, 16)];
     if (section == 0) {
         sectionView.image = [UIImage imageNamed:@"home_recommed_ac"];
-        LXJLog(@"%@",sectionView.image);
     }else{
         sectionView.image = [UIImage imageNamed:@"home_recommd_rc"];
-        LXJLog(@"%@",sectionView.image);
     }
-    LXJLog(@"%ld",section);
 
     [view addSubview:sectionView];
     return view;
@@ -129,7 +124,11 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     if (indexPath.section == 0) {
-        ActivityDetailViewController *activityVC = [[ActivityDetailViewController alloc]init];
+        UIStoryboard *mainStoryBoard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+        ActivityDetailViewController *activityVC = [mainStoryBoard instantiateViewControllerWithIdentifier:@"ActivityDetailVC"];
+        //活动id
+        MainModel *mainModel = self.listArray[indexPath.section][indexPath.row];
+        activityVC.activityId = mainModel.activityId;
         [self.navigationController pushViewController:activityVC animated:YES];
     } else {
         ThemeViewController *themeVC = [[ThemeViewController alloc]init];
@@ -206,16 +205,15 @@
     AFHTTPSessionManager *sessionManage = [AFHTTPSessionManager manager];
     sessionManage.responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"text/html"];
     [sessionManage GET:urlString parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
-//        NSLog(@"%lld",downloadProgress.totalUnitCount);
-        
+
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-//        NSLog(@"%@",responseObject);
+        
         NSDictionary *resultDic = responseObject;
         NSString *status = resultDic[@"status"];
         NSInteger code = [resultDic[@"code"] integerValue];
         if ([status isEqualToString:@"success"] && code == 0) {
             NSDictionary *dic = resultDic[@"success"];
-//            //推荐活动
+            //推荐活动
             NSArray *acDataArray = dic[@"acData"];
             for (NSDictionary *dict in acDataArray) {
                 MainModel *model = [[MainModel alloc]initWithDictionary:dict];
@@ -229,7 +227,6 @@
                 [self.themeArray addObject:model];
             }
             [self.listArray addObject:self.themeArray];
-            NSLog(@"%@",self.listArray);
             //刷新tableView数据
             [self.tableView reloadData];
             //广告
@@ -306,9 +303,6 @@
     self.pageControl.currentPage = page;
     //计算出scrollView应该滚动的X轴坐标
     CGFloat offsetX = self.pageControl.currentPage * self.scrollView.frame.size.width;
-//    if (offsetX == self.scrollView.frame.size.width * self.adArray.count) {
-//        self.pageControl.currentPage = 0;
-//    }
     [self.scrollView setContentOffset:CGPointMake(offsetX, 0) animated:YES];
     
 }
