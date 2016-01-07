@@ -147,6 +147,7 @@
 		7A0FBB0B1C3BA4F6004D3C31 /* Property List.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7A0FBB0A1C3BA4F6004D3C31 /* Property List.plist */; };
 		7A49F7331C3D1B280030159E /* File in Resources */ = {isa = PBXBuildFile; fileRef = 7A49F7321C3D1B280030159E /* File */; };
 		7A49F7361C3D20180030159E /* UIViewController+Common.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A49F7351C3D20180030159E /* UIViewController+Common.m */; };
+		7AEE72211C3E10DA00786925 /* ActivityDetailView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AEE72201C3E10DA00786925 /* ActivityDetailView.m */; };
 		7AF98FEE1C3CBC14009855D2 /* SelectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AF98FED1C3CBC14009855D2 /* SelectViewController.m */; };
 		7AF98FF11C3CBD9A009855D2 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AF98FF01C3CBD9A009855D2 /* SearchViewController.m */; };
 		7AF98FF41C3CBE84009855D2 /* ActivityDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AF98FF31C3CBE84009855D2 /* ActivityDetailViewController.m */; };
@@ -307,9 +308,11 @@
 		7A0FBB051C3BA081004D3C31 /* MainModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainModel.h; sourceTree = "<group>"; };
 		7A0FBB061C3BA081004D3C31 /* MainModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainModel.m; sourceTree = "<group>"; };
 		7A0FBB0A1C3BA4F6004D3C31 /* Property List.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Property List.plist"; sourceTree = "<group>"; };
-		7A49F7321C3D1B280030159E /* File */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = File; sourceTree = "<group>"; };
+		7A49F7321C3D1B280030159E /* File */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = File; path = ../Controllers/File; sourceTree = "<group>"; };
 		7A49F7341C3D20180030159E /* UIViewController+Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIViewController+Common.h"; path = "../../Classes/main/Controllers/UIViewController+Common.h"; sourceTree = "<group>"; };
 		7A49F7351C3D20180030159E /* UIViewController+Common.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIViewController+Common.m"; path = "../../Classes/main/Controllers/UIViewController+Common.m"; sourceTree = "<group>"; };
+		7AEE721F1C3E10DA00786925 /* ActivityDetailView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActivityDetailView.h; sourceTree = "<group>"; };
+		7AEE72201C3E10DA00786925 /* ActivityDetailView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActivityDetailView.m; sourceTree = "<group>"; };
 		7AF98FE91C3CB56A009855D2 /* BlackWeekend.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BlackWeekend.pch; sourceTree = "<group>"; };
 		7AF98FEB1C3CB6BC009855D2 /* HWDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HWDefine.h; sourceTree = "<group>"; };
 		7AF98FEC1C3CBC14009855D2 /* SelectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SelectViewController.h; path = ../../../../SelectViewController.h; sourceTree = "<group>"; };
@@ -467,7 +470,6 @@
 				7AF98FF01C3CBD9A009855D2 /* SearchViewController.m */,
 				7AF98FF21C3CBE84009855D2 /* ActivityDetailViewController.h */,
 				7AF98FF31C3CBE84009855D2 /* ActivityDetailViewController.m */,
-				7A49F7321C3D1B280030159E /* File */,
 				7AF98FF51C3CBF3C009855D2 /* ThemeViewController.h */,
 				7AF98FF61C3CBF3C009855D2 /* ThemeViewController.m */,
 				7AF98FF81C3CBFFB009855D2 /* ClassifyViewController.h */,
@@ -483,6 +485,7 @@
 		7A00D8871C3A4E4100FA1077 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				7A49F7321C3D1B280030159E /* File */,
 				7A0FBB051C3BA081004D3C31 /* MainModel.h */,
 				7A0FBB061C3BA081004D3C31 /* MainModel.m */,
 				7A0FBB0A1C3BA4F6004D3C31 /* Property List.plist */,
@@ -497,6 +500,8 @@
 				7A00DC6E1C3A766800FA1077 /* MainTableViewCell.h */,
 				7A00DC6F1C3A766800FA1077 /* MainTableViewCell.m */,
 				7A00DC701C3A766800FA1077 /* MainTableViewCell.xib */,
+				7AEE721F1C3E10DA00786925 /* ActivityDetailView.h */,
+				7AEE72201C3E10DA00786925 /* ActivityDetailView.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -961,6 +966,7 @@
 				7AF98FF71C3CBF3C009855D2 /* ThemeViewController.m in Sources */,
 				7AF990001C3CC070009855D2 /* HotViewController.m in Sources */,
 				7A00D8911C3A4E4100FA1077 /* MineViewController.m in Sources */,
+				7AEE72211C3E10DA00786925 /* ActivityDetailView.m in Sources */,
 				7AF98FFD1C3CC068009855D2 /* ActivityViewController.m in Sources */,
 				7A00D8571C3A1C4800FA1077 /* main.m in Sources */,
 				7A00D8901C3A4E4100FA1077 /* MainViewController.m in Sources */,

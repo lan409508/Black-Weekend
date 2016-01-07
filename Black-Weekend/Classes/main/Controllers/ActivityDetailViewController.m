@@ -9,8 +9,10 @@
 #import "ActivityDetailViewController.h"
 #import "AFNetworking/AFHTTPSessionManager.h"
 #import "MBProgressHUD.h"
-
+#import "ActivityDetailView.h"
 @interface ActivityDetailViewController ()
+
+@property (strong, nonatomic) IBOutlet ActivityDetailView *activityDetailView;
 
 
 
@@ -24,8 +26,8 @@
     self.view.backgroundColor = [UIColor whiteColor];
     self.title = @"活动详情";
     [self showBackButton];
-    
-//    [self getModel];
+   
+    [self getModel];
 }
 
 #pragma mark --------- Custom  Method
@@ -36,13 +38,23 @@
     [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     
     [sessionMaganer GET:[NSString stringWithFormat:@"%@&id=%@",kActivityDetail,self.activityId] parameters:nil progress: ^(NSProgress * _Nonnull downloadProgress) {
-        LXJLog(@"%@",downloadProgress);
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         [MBProgressHUD hideAllHUDsForView:self.view animated:YES];
-        LXJLog(@"%@",responseObject);
+        NSDictionary *dic = responseObject;
+        NSString *status = dic[@"status"];
+        NSInteger code = [dic[@"code"] integerValue];
+        if ([status isEqualToString:@"success"] && code == 0) {
+            
+            NSDictionary *successDic = dic[@"success"]; 
+            self.activityDetailView.dataDic = successDic;
+        
+        } else {
+            
+        }
+        
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        [MBProgressHUD hideAllHUDsForView:self.view animated:YES];
-        LXJLog(@"%@",error);
+//        [MBProgressHUD hideAllHUDsForView:self.view animated:YES];
+        LXJLog("%@",error);
     }];
 }
 

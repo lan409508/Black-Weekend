@@ -16,7 +16,7 @@
                     <view key="view" contentMode="scaleToFill" id="ZEc-yO-gVa">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="0.87797199380774849" blue="0.66294101619771495" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="1" green="0.66459958649999995" blue="0.63732134259999995" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <navigationItem key="navigationItem" title="发现" id="0cD-0W-mP4"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
