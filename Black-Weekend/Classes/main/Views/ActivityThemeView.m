@@ -1,15 +1,15 @@
 //
-//  ActivityDetailView.m
+//  ActivityThemeView.m
 //  Black-Weekend
-//
-//  Created by scjy on 16/1/7.
+//  活动专题
+//  Created by scjy on 16/1/8.
 //  Copyright © 2016年 练晓俊. All rights reserved.
 //
 
-#import "ActivityDetailView.h"
+#import "ActivityThemeView.h"
 #import <SDWebImage/UIImageView+WebCache.h>
+@interface ActivityThemeView ()
 
-@interface ActivityDetailView ()
 
 {
     //保存上一次图片底部的高度
@@ -18,46 +18,29 @@
     CGFloat _lastLabelBottom;
 }
 
-@property (weak, nonatomic) IBOutlet UIImageView *headImageView;
-@property (weak, nonatomic) IBOutlet UILabel *activityTitleLabel;
-@property (weak, nonatomic) IBOutlet UILabel *activityTimeLabel;
-@property (weak, nonatomic) IBOutlet UILabel *favoriteLabel;
-@property (weak, nonatomic) IBOutlet UILabel *activityPriceLabel;
-@property (weak, nonatomic) IBOutlet UIScrollView *mainScrollView;
-@property (weak, nonatomic) IBOutlet UILabel *activityAddressLabel;
-@property (weak, nonatomic) IBOutlet UILabel *activityPhoneLabel;
 
-
-
-
+@property (nonatomic, strong) UIScrollView *mainScrollView;
+@property (nonatomic, strong) UIImageView *headImageView;
 
 @end
 
-@implementation ActivityDetailView
+@implementation ActivityThemeView
 
-- (void)awakeFromNib{
-    self.mainScrollView.contentSize = CGSizeMake(kScreenWidth, 5000);
+
+- (instancetype)initWithFrame:(CGRect)frame{
+    self = [super initWithFrame:frame];
+    if (self) {
+        [self configView];
+    }
+    return self;
 }
+
+
 //在set方法中赋值
 - (void)setDataDic:(NSDictionary *)dataDic{
-    NSArray *urls = dataDic[@"urls"];
-    NSString *Astr = urls[0];
-    //活动图片
-    [self.headImageView sd_setImageWithURL:[NSURL URLWithString:Astr] placeholderImage:nil];
-    //活动标题
-    self.activityTitleLabel.text = dataDic[@"title"];
-    //活动起止时间
-    NSString *startTime = [HWTools getDateFromString: dataDic[@"new_start_date"] ];
-    NSString *endTime = [HWTools getDateFromString: dataDic[@"new_end_date"] ];
-    self.activityTimeLabel.text = [NSString stringWithFormat:@" 正在进行: %@-%@",startTime,endTime];
-    //已经有多少人喜欢
-    self.favoriteLabel.text = [NSString stringWithFormat:@"%@人已收藏",dataDic[@"fav"]];
-    //参考价格
-    self.activityPriceLabel.text = [NSString stringWithFormat:@"价格参考:   %@",dataDic[@"pricedesc"]];
-    //活动地址
-    self.activityAddressLabel.text = dataDic[@"address"];
-    //活动电话
-    self.activityPhoneLabel.text = dataDic[@"tel"];
+    [self.headImageView sd_setImageWithURL:[NSURL URLWithString:dataDic[@"image"]] placeholderImage:nil];
+    
+    
     //活动详情
     [self drawContentWithArray:dataDic[@"content"]];
 }
@@ -67,10 +50,10 @@
         //每一段活动信息
         CGFloat height = [HWTools getTextHeightWithText:dic[@"description"] BigestSize:CGSizeMake(kScreenWidth, 1000) textFont:15.0];
         CGFloat y;
-        if (_previousImageBottom > 450) { //如果图片底部的高度没有值（也就是小于450）,也就说明是加载第一个lable，那么y的值不应该减去450
-            y = 450 + _previousImageBottom - 450;
+        if (_previousImageBottom > 186) { //如果图片底部的高度没有值（也就是小于450）,也就说明是加载第一个lable，那么y的值不应该减去186
+            y = 186 + _previousImageBottom - 186;
         } else {
-            y = 450 + _previousImageBottom;
+            y = 186 + _previousImageBottom;
         }
         NSString *title = dic[@"title"];
         if (title != nil) {
@@ -127,7 +110,29 @@
         }
     }
     self.mainScrollView.contentSize = CGSizeMake(kScreenWidth,_lastLabelBottom);
+    
+}
 
+- (void)configView{
+    [self addSubview:self.mainScrollView];
+    [self.mainScrollView addSubview:self.headImageView];
+    self.mainScrollView.contentSize = CGSizeMake(kScreenWidth, 5000);
+
+}
+
+- (UIScrollView *)mainScrollView {
+    if (_mainScrollView == nil) {
+        self.mainScrollView = [[UIScrollView alloc]initWithFrame:self.frame];
+        
+    }
+    return _mainScrollView;
+}
+
+- (UIImageView *)headImageView {
+    if (_headImageView == nil) {
+        self.headImageView = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, kScreenWidth, 186)];
+    }
+    return _headImageView;
 }
 
 @end

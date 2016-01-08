@@ -19,6 +19,7 @@
 #import "ActivityViewController.h"
 #import "HotViewController.h"
 
+
 @interface MainViewController ()<UITableViewDataSource,UITableViewDelegate,UIScrollViewDelegate>
 @property (nonatomic, strong) UIView *tableViewHeaderView;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
@@ -74,6 +75,13 @@
     [self startTimer];
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    //取消隐藏tabbar
+    self.tabBarController.tabBar.hidden = NO;
+    
+}
+
 #pragma mark -------- UITableViewDataSource
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
@@ -123,15 +131,18 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+     MainModel *mainModel = self.listArray[indexPath.section][indexPath.row];
     if (indexPath.section == 0) {
         UIStoryboard *mainStoryBoard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
         ActivityDetailViewController *activityVC = [mainStoryBoard instantiateViewControllerWithIdentifier:@"ActivityDetailVC"];
         //活动id
-        MainModel *mainModel = self.listArray[indexPath.section][indexPath.row];
+       
         activityVC.activityId = mainModel.activityId;
+        
         [self.navigationController pushViewController:activityVC animated:YES];
     } else {
         ThemeViewController *themeVC = [[ThemeViewController alloc]init];
+        themeVC.themeId = mainModel.activityId;
         [self.navigationController pushViewController:themeVC animated:YES];
     }
 }
@@ -282,8 +293,9 @@
         activityDVC.activityId = self.adArray[adButton.tag - 100][@"id"];
         [self.navigationController pushViewController:activityDVC animated:YES];
     } else {
-        HotViewController *hotVC = [[HotViewController alloc]init];
-        [self.navigationController pushViewController:hotVC animated:YES];
+        ThemeViewController *themeVC = [[ThemeViewController alloc]init];
+        themeVC.themeId = self.adArray[adButton.tag - 100][@"id"];
+        [self.navigationController pushViewController:themeVC animated:YES];
     }
 }
 
@@ -299,11 +311,14 @@
 //每两秒执行一次图片自动轮播
 - (void)rollAnimation{
     //把page当前页加1
+    //self.adArray.count 数组元素个数可能为0，0不能做除数
+    if (self.adArray.count > 0) {
     NSInteger page = (self.pageControl.currentPage + 1) % self.adArray.count;
     self.pageControl.currentPage = page;
     //计算出scrollView应该滚动的X轴坐标
     CGFloat offsetX = self.pageControl.currentPage * self.scrollView.frame.size.width;
     [self.scrollView setContentOffset:CGPointMake(offsetX, 0) animated:YES];
+    }
     
 }
 //当手动去滑动scrollView的时候，定时器依然在计算时间，可能我们刚刚滑动到下一页，定时器时间刚好有触发，导致在当前页停留的时间不够两秒

@@ -1,7 +1,7 @@
 //
 //  ActivityDetailViewController.m
 //  Black-Weekend
-//
+//  活动详情
 //  Created by scjy on 16/1/6.
 //  Copyright © 2016年 练晓俊. All rights reserved.
 //
@@ -10,6 +10,7 @@
 #import "AFNetworking/AFHTTPSessionManager.h"
 #import "MBProgressHUD.h"
 #import "ActivityDetailView.h"
+#import "AppDelegate.h"
 @interface ActivityDetailViewController ()
 
 {
@@ -29,6 +30,8 @@
     // Do any additional setup after loading the view.
     self.view.backgroundColor = [UIColor whiteColor];
     self.title = @"活动详情";
+    //隐藏tabBar
+    self.tabBarController.tabBar.hidden = YES;
     [self showBackButton];
     
     //去地图页面

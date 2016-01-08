@@ -22,7 +22,7 @@
     // Override point for customization after application launch.
     
     //UITabBarController
-    UITabBarController *tabBarVC = [[UITabBarController alloc]init];
+    self.tabBarVC = [[UITabBarController alloc]init];
     //创建tabBarVC管理的视图控制器
     //主页
     UIStoryboard *mainstoryBoard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
@@ -48,9 +48,9 @@
     MineNav.tabBarItem.selectedImage = [selectImage2 imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     MineNav.tabBarItem.imageInsets = UIEdgeInsetsMake(6, 0, -6, 0);
     //添加被管理的视图控制器
-    tabBarVC.viewControllers = @[mainNav,discoverNav,MineNav];
+    _tabBarVC.viewControllers = @[mainNav,discoverNav,MineNav];
     
-    self.window.rootViewController = tabBarVC;
+    self.window.rootViewController = _tabBarVC;
     
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
