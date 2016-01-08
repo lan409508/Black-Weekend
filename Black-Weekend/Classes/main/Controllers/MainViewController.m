@@ -70,7 +70,7 @@
     
     [self configTableViewHeaderView];
     //请求网络
-    [self requestModel];
+//    [self requestModel];
     //启动定时器
     [self startTimer];
 }
@@ -273,12 +273,14 @@
 //精选活动
 - (void)activityButtonAction{
     ActivityViewController *activityVC = [[ActivityViewController alloc]init];
+    self.tabBarController.tabBar.hidden = YES;
     [self.navigationController pushViewController:activityVC animated:YES];
 }
 
 //热门专题
 - (void)hotButtonAction{
     HotViewController *hotVC = [[HotViewController alloc]init];
+    self.tabBarController.tabBar.hidden = YES;
     [self.navigationController pushViewController:hotVC animated:YES];
 }
 

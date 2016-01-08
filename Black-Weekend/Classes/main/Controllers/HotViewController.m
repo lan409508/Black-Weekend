@@ -18,9 +18,9 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.view.backgroundColor = [UIColor whiteColor];
-    self.title = @"热门专题";
-    
     [self showBackButton];
+    
+    
 }
 
 - (void)didReceiveMemoryWarning {
