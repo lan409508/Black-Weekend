@@ -8,6 +8,9 @@
 
 #import "ActivityViewController.h"
 #import "PullingRefreshTableView.h"
+#import "ActivityModel.h"
+#import "ActivityTableViewCell.h"
+#import "ActivityDetailViewController.h"
 #import <AFNetworking/AFHTTPSessionManager.h>
 @interface ActivityViewController ()<UITableViewDataSource,UITableViewDelegate,PullingRefreshTableViewDelegate>
 {
@@ -15,6 +18,8 @@
 }
 @property(nonatomic, assign) BOOL refreshing;
 @property(nonatomic, strong) PullingRefreshTableView *tableView;
+@property(nonatomic, strong) NSMutableArray *listArray;
+
 @end
 
 @implementation ActivityViewController
@@ -34,16 +39,24 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     ActivityTableViewCell *activityCell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
+    activityCell.activityModel = self.listArray[indexPath.row];
     return activityCell;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 20;
+    
+    return self.listArray.count;
 }
 
 #pragma mark ---------- TableViewDelegate
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    ActivityModel *model = self.listArray[indexPath.row];
+    UIStoryboard *main = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    ActivityDetailViewController *actVC = [main instantiateViewControllerWithIdentifier:@"ActivityDetailVC"];
     
+    //活动id
+    actVC.activityId = model.activityId;
+    [self.navigationController pushViewController:actVC animated:YES];
 }
 
 #pragma mark ---------- PullingRefreshTableViewDelegate
@@ -73,9 +86,18 @@
         NSDictionary *dic = responseObject;
         NSString *status = dic[@"status"];
         NSInteger code = [dic[@"code"]integerValue];
-        if ([status isEqualToString:@"status"]&& code == 0) {
+        self.listArray = [NSMutableArray new];
+        if ([status isEqualToString:@"success"] && code == 0) {
             NSDictionary *dict = dic[@"success"];
-            self.tableView = dict[@"acData"];
+            NSArray *acArray = dict[@"acData"];
+            for (NSDictionary *acDic in acArray) {
+                ActivityModel *model = [[ActivityModel alloc]initWithDictionary:acDic];
+                [self.listArray addObject:model];
+            }
+            [self.tableView tableViewDidFinishedLoading];
+            self.tableView.reachedTheEnd = NO;
+            [self.tableView reloadData];
+        
         } else {
             
         }

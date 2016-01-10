@@ -16,6 +16,7 @@
     CGFloat _previousImageBottom;
     //最后一个label底部高度
     CGFloat _lastLabelBottom;
+    CGFloat _lastImageView;
 }
 
 
@@ -106,9 +107,11 @@
                 if (urlsArray.count > 1) {
                     lastImgbottom = imageView.bottom;
                 }
+                _lastImageView = lastImgbottom + 30;
             }
         }
     }
+    
     self.mainScrollView.contentSize = CGSizeMake(kScreenWidth,_lastLabelBottom);
     
 }

@@ -70,7 +70,7 @@
     
     [self configTableViewHeaderView];
     //请求网络
-//    [self requestModel];
+    [self requestModel];
     //启动定时器
     [self startTimer];
 }

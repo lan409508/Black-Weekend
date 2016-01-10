@@ -34,8 +34,6 @@
 //        self.title = dic[@"title"];
 //        self.activityId = dic[@"id"];
     }
-    
-    
     return self;
 }
 

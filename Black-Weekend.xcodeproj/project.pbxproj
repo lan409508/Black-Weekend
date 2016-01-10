@@ -157,6 +157,10 @@
 		7A69DFB91C3FC5BD001BC9E8 /* ActivityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A69DFB81C3FC5BD001BC9E8 /* ActivityViewController.m */; };
 		7A69DFBD1C3FCA44001BC9E8 /* ActivityTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A69DFBB1C3FCA44001BC9E8 /* ActivityTableViewCell.m */; };
 		7A69DFBE1C3FCA44001BC9E8 /* ActivityTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7A69DFBC1C3FCA44001BC9E8 /* ActivityTableViewCell.xib */; };
+		7A8B691F1C423C8F00E84B97 /* HotActivity.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7A8B691E1C423C8F00E84B97 /* HotActivity.plist */; };
+		7A8B69261C4243E400E84B97 /* HotTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A8B69241C4243E400E84B97 /* HotTableViewCell.m */; };
+		7A8B69271C4243E400E84B97 /* HotTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7A8B69251C4243E400E84B97 /* HotTableViewCell.xib */; };
+		7A8B692A1C4243FD00E84B97 /* HotModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A8B69291C4243FD00E84B97 /* HotModel.m */; };
 		7AEE72211C3E10DA00786925 /* ActivityDetailView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AEE72201C3E10DA00786925 /* ActivityDetailView.m */; };
 		7AEE72241C3E4C2500786925 /* HWTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AEE72231C3E4C2500786925 /* HWTools.m */; };
 		7AEE72271C3E5B0800786925 /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AEE72261C3E5B0800786925 /* UIView+Extension.m */; };
@@ -337,6 +341,12 @@
 		7A69DFBA1C3FCA44001BC9E8 /* ActivityTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActivityTableViewCell.h; sourceTree = "<group>"; };
 		7A69DFBB1C3FCA44001BC9E8 /* ActivityTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActivityTableViewCell.m; sourceTree = "<group>"; };
 		7A69DFBC1C3FCA44001BC9E8 /* ActivityTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ActivityTableViewCell.xib; sourceTree = "<group>"; };
+		7A8B691E1C423C8F00E84B97 /* HotActivity.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = HotActivity.plist; sourceTree = "<group>"; };
+		7A8B69231C4243E400E84B97 /* HotTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HotTableViewCell.h; sourceTree = "<group>"; };
+		7A8B69241C4243E400E84B97 /* HotTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HotTableViewCell.m; sourceTree = "<group>"; };
+		7A8B69251C4243E400E84B97 /* HotTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HotTableViewCell.xib; sourceTree = "<group>"; };
+		7A8B69281C4243FD00E84B97 /* HotModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HotModel.h; sourceTree = "<group>"; };
+		7A8B69291C4243FD00E84B97 /* HotModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HotModel.m; sourceTree = "<group>"; };
 		7AEE721F1C3E10DA00786925 /* ActivityDetailView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActivityDetailView.h; sourceTree = "<group>"; };
 		7AEE72201C3E10DA00786925 /* ActivityDetailView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActivityDetailView.m; sourceTree = "<group>"; };
 		7AEE72221C3E4C2500786925 /* HWTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HWTools.h; path = ../../Classes/main/Views/HWTools.h; sourceTree = "<group>"; };
@@ -514,11 +524,14 @@
 				7A0FBB051C3BA081004D3C31 /* MainModel.h */,
 				7A0FBB061C3BA081004D3C31 /* MainModel.m */,
 				7A69DFAA1C3FBC26001BC9E8 /* Activity.plist */,
+				7A8B691E1C423C8F00E84B97 /* HotActivity.plist */,
 				7A0FBB0A1C3BA4F6004D3C31 /* Property List.plist */,
 				7A69DF941C3F5D60001BC9E8 /* ActivityTheme.plist */,
 				7A69DF921C3F5827001BC9E8 /* MainList.plist */,
 				7A69DFAC1C3FBE3F001BC9E8 /* ActivityModel.h */,
 				7A69DFAD1C3FBE3F001BC9E8 /* ActivityModel.m */,
+				7A8B69281C4243FD00E84B97 /* HotModel.h */,
+				7A8B69291C4243FD00E84B97 /* HotModel.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -537,6 +550,9 @@
 				7A69DFBA1C3FCA44001BC9E8 /* ActivityTableViewCell.h */,
 				7A69DFBB1C3FCA44001BC9E8 /* ActivityTableViewCell.m */,
 				7A69DFBC1C3FCA44001BC9E8 /* ActivityTableViewCell.xib */,
+				7A8B69231C4243E400E84B97 /* HotTableViewCell.h */,
+				7A8B69241C4243E400E84B97 /* HotTableViewCell.m */,
+				7A8B69251C4243E400E84B97 /* HotTableViewCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -923,6 +939,7 @@
 				7A00D94A1C3A5D1200FA1077 /* 48-fork-and-knife.png in Resources */,
 				7A00D95B1C3A5D1200FA1077 /* 65-note.png in Resources */,
 				7A00D91C1C3A5D1200FA1077 /* 102-walk.png in Resources */,
+				7A8B69271C4243E400E84B97 /* HotTableViewCell.xib in Resources */,
 				7A00D97A1C3A5D1200FA1077 /* 96-book.png in Resources */,
 				7A00D9391C3A5D1200FA1077 /* 31-ipod.png in Resources */,
 				7A69DF9E1C3F9E69001BC9E8 /* blueArrow.png in Resources */,
@@ -949,6 +966,7 @@
 				7A00D9481C3A5D1200FA1077 /* 46-movie2.png in Resources */,
 				7A00D85F1C3A1C4800FA1077 /* LaunchScreen.storyboard in Resources */,
 				7A00D9751C3A5D1200FA1077 /* 91-beaker2.png in Resources */,
+				7A8B691F1C423C8F00E84B97 /* HotActivity.plist in Resources */,
 				7A00DC641C3A65E200FA1077 /* ft_found_selected_ic@2x.png in Resources */,
 				7A00D92F1C3A5D1200FA1077 /* 21-skull.png in Resources */,
 				7A00D95F1C3A5D1200FA1077 /* 69-display.png in Resources */,
@@ -1015,6 +1033,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7A69DFBD1C3FCA44001BC9E8 /* ActivityTableViewCell.m in Sources */,
+				7A8B692A1C4243FD00E84B97 /* HotModel.m in Sources */,
 				7A69DFB91C3FC5BD001BC9E8 /* ActivityViewController.m in Sources */,
 				7AEE72271C3E5B0800786925 /* UIView+Extension.m in Sources */,
 				7AEE72241C3E4C2500786925 /* HWTools.m in Sources */,
@@ -1031,6 +1050,7 @@
 				7A69DF981C3F5ED7001BC9E8 /* ActivityThemeView.m in Sources */,
 				7A00D8911C3A4E4100FA1077 /* MineViewController.m in Sources */,
 				7A69DFA01C3F9E69001BC9E8 /* PullingRefreshTableView.m in Sources */,
+				7A8B69261C4243E400E84B97 /* HotTableViewCell.m in Sources */,
 				7AEE72211C3E10DA00786925 /* ActivityDetailView.m in Sources */,
 				7A00D8571C3A1C4800FA1077 /* main.m in Sources */,
 				7A00D8901C3A4E4100FA1077 /* MainViewController.m in Sources */,

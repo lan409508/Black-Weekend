@@ -12,7 +12,8 @@
 
 @interface ThemeViewController ()
 
-@property (nonatomic, strong) ActivityThemeView *themeView;
+@property(nonatomic, strong) ActivityThemeView *themeView;
+@property(nonatomic, strong) UIButton *praiseBtn;
 
 @end
 
@@ -23,6 +24,12 @@
     self.themeView = [[ActivityThemeView alloc]initWithFrame:self.view.frame];
     self.view = self.themeView;
     [self getModel];
+    self.praiseBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    UIImage *image = [UIImage imageNamed:@"btn_list_praise_yuer"];
+    [self.praiseBtn setBackgroundImage:image forState:UIControlStateNormal];
+    self.praiseBtn.frame = CGRectMake(kScreenWidth - 55, 150, 20, 20);
+
+    [self.view addSubview:self.praiseBtn];
 }
 
 - (void)viewDidLoad {
@@ -39,14 +46,13 @@
 - (void)getModel{
     AFHTTPSessionManager *sessionManager = [AFHTTPSessionManager manager];
     sessionManager.responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"text/html"];
-    [sessionManager GET:[NSString stringWithFormat:@"%@&id=%@",kActivityTheme,@"825"] parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
+    [sessionManager GET:[NSString stringWithFormat:@"%@&id=%@",kActivityTheme,self.themeId] parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
         
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         NSDictionary *dic = responseObject;
         NSString *status = dic[@"status"];
         NSInteger code = [dic[@"code"] integerValue];
         if ([status isEqualToString:@"success"] && code == 0) {
-            
             NSDictionary *successDic = dic[@"success"];
             self.themeView.dataDic = successDic;
             self.navigationItem.title = dic[@"success"][@"title"];

@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "HotTableViewCell.h"
 @interface HotViewController : UIViewController
 
 @end

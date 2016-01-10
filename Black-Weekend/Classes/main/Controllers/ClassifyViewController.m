@@ -10,6 +10,8 @@
 
 @interface ClassifyViewController ()
 
+@property(nonatomic, strong) UISegmentedControl *segmentControl;
+
 @end
 
 @implementation ClassifyViewController
@@ -17,7 +19,13 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    [self showBackButton];
+    self.title = @"分类列表";
     self.view.backgroundColor = [UIColor whiteColor];
+    
+    self.segmentControl = [[UISegmentedControl alloc]initWithItems:@[@"演出剧目",@"景点场馆",@"学习益智",@"亲子游戏"]];
+    self.segmentControl.frame = CGRectMake(0, 0, self.view.frame.size.width, 40);
+    [self.view addSubview:self.segmentControl];
 }
 
 - (void)didReceiveMemoryWarning {

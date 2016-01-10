@@ -119,7 +119,7 @@
                 [imageView sd_setImageWithURL:[NSURL URLWithString:urlDic[@"url"]] placeholderImage:nil];
                 [self.mainScrollView addSubview:imageView];
                 //每次都保留最新的图片底部高度
-                _previousImageBottom = imageView.bottom + 5;
+                _previousImageBottom = imageView.bottom + 50;
                 if (urlsArray.count > 1) {
                     lastImgbottom = imageView.bottom;
                 }
