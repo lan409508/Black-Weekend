@@ -13,7 +13,6 @@
 @interface ThemeViewController ()
 
 @property(nonatomic, strong) ActivityThemeView *themeView;
-@property(nonatomic, strong) UIButton *praiseBtn;
 
 @end
 
@@ -24,12 +23,6 @@
     self.themeView = [[ActivityThemeView alloc]initWithFrame:self.view.frame];
     self.view = self.themeView;
     [self getModel];
-    self.praiseBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-    UIImage *image = [UIImage imageNamed:@"btn_list_praise_yuer"];
-    [self.praiseBtn setBackgroundImage:image forState:UIControlStateNormal];
-    self.praiseBtn.frame = CGRectMake(kScreenWidth - 55, 150, 20, 20);
-
-    [self.view addSubview:self.praiseBtn];
 }
 
 - (void)viewDidLoad {

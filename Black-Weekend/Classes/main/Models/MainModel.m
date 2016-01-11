@@ -31,8 +31,8 @@
             self.activityDescription = dic[@"description"];
         }
         self.iamge_big = dic[@"image_big"];
-//        self.title = dic[@"title"];
-//        self.activityId = dic[@"id"];
+        self.title = dic[@"title"];
+        self.activityId = dic[@"id"];
     }
     return self;
 }

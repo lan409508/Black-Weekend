@@ -75,13 +75,13 @@
         NSString *title = dic[@"title"];
         if (title != nil) {
             //如果标题存在,标题的高度应该是上次图片的底部高度
-            UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, y, kScreenWidth - 20, 30)];
+            UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, y - 5, kScreenWidth - 20, 30)];
             titleLabel.text = title;
             [self.mainScrollView addSubview:titleLabel];
             //下边详细信息label显示的时候，高度的坐标应该再加30，也就是标题的高度。
             y += 30;
         }
-        UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(10, y, kScreenWidth - 10, height)];
+        UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(10, y - 5, kScreenWidth - 10, height)];
         label.text = dic[@"description"];
         label.numberOfLines = 0;
         label.font = [UIFont systemFontOfSize:15.0];
@@ -100,7 +100,7 @@
                     //图片不止一张的情况
                     if (lastImgbottom == 0.0) {
                         if (title != nil) { //有title的算上title的30像素
-                            imgY = _previousImageBottom + label.height + 30 + 5;
+                            imgY = _previousImageBottom + label.height + 5;
                         } else {
                             imgY = _previousImageBottom + label.height + 5;
                         }
@@ -119,7 +119,7 @@
                 [imageView sd_setImageWithURL:[NSURL URLWithString:urlDic[@"url"]] placeholderImage:nil];
                 [self.mainScrollView addSubview:imageView];
                 //每次都保留最新的图片底部高度
-                _previousImageBottom = imageView.bottom + 50;
+                _previousImageBottom = imageView.bottom + 10;
                 if (urlsArray.count > 1) {
                     lastImgbottom = imageView.bottom;
                 }

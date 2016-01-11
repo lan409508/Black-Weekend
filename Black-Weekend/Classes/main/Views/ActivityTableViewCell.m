@@ -32,6 +32,8 @@
     self.activityTitleLabel.text = activityModel.title;
     self.activityPriceLabel.text = activityModel.price;
     self.ageLabel.text = activityModel.age;
+    [self.loveCountButton setTitle:[NSString stringWithFormat:@"%@",activityModel.counts]forState:UIControlStateNormal];
+    self.activityDistanceLabel.text = @"521km";
 
    // self.headImageView.image = activityModel.image;
     

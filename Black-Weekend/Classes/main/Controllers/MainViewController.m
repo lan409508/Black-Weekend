@@ -70,7 +70,7 @@
     
     [self configTableViewHeaderView];
     //请求网络
-    [self requestModel];
+    //[self requestModel];
     //启动定时器
     [self startTimer];
 }
@@ -267,6 +267,8 @@
 //分类列表
 - (void)mainActivityButtonAction:(UIButton *)btn{
     ClassifyViewController *classifyVC = [[ClassifyViewController alloc]init];
+    NSInteger num = btn.tag - 100 + 1;
+    classifyVC.classifyListType = num;
     [self.navigationController pushViewController:classifyVC animated:YES];
 }
 
@@ -297,6 +299,7 @@
     } else {
         ThemeViewController *themeVC = [[ThemeViewController alloc]init];
         themeVC.themeId = self.adArray[adButton.tag - 100][@"id"];
+        LXJLog(@"%@",themeVC.themeId);
         [self.navigationController pushViewController:themeVC animated:YES];
     }
 }

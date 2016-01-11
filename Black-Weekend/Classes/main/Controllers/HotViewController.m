@@ -19,7 +19,7 @@
 @property(nonatomic, assign) BOOL refreshing;
 @property(nonatomic, strong) PullingRefreshTableView *tableView;
 @property(nonatomic, strong) NSMutableArray *listArray;
-@property(nonatomic, strong) UILabel *praiseLabel;
+
 
 @end
 
@@ -32,11 +32,10 @@
     [self showBackButton];
     self.title = @"热门专题";
     [self.view addSubview:self.tableView];
-    self.tableView.rowHeight = 160;
+    self.tableView.rowHeight = 200;
     [self.tableView registerNib:[UINib nibWithNibName:@"HotTableViewCell"  bundle:nil]forCellReuseIdentifier:@"cell"];
-    self.praiseLabel = [[UILabel alloc]initWithFrame:CGRectMake(kScreenWidth - 55, 130, 40, 20)];
-    self.praiseLabel.backgroundColor = [UIColor whiteColor];
-    [self.tableView addSubview:self.praiseLabel];
+    self.listArray = [NSMutableArray new];
+    [self.tableView reloadData];
     [self.tableView launchRefreshing];
 }
 
@@ -65,15 +64,17 @@
 }
 
 #pragma mark ---------- PullingRefreshTableViewDelegate
+//下拉刷新
 - (void)pullingTableViewDidStartRefreshing:(PullingRefreshTableView *)tableView{
     _pageCount = 1;
     self.refreshing = YES;
     [self performSelector:@selector(loadData) withObject:nil afterDelay:1.0];
 }
-
+//上拉加载
 - (void)pullingTableViewDidStartLoading:(PullingRefreshTableView *)tableView{
-    _pageCount = 1;
-    [self performSelector:@selector(loadData ) withObject:nil afterDelay:1.0];
+    _pageCount += 1;
+    self.refreshing = NO;
+    [self performSelector:@selector(loadData) withObject:nil afterDelay:1.0];
 }
 
 //刷新完成时间
@@ -85,22 +86,26 @@
 - (void)loadData {
     AFHTTPSessionManager *sessionManager = [AFHTTPSessionManager manager];
     sessionManager.responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"text/html"];
-    [sessionManager GET:[NSString stringWithFormat:@"%@",Hot] parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
+    [sessionManager GET:[NSString stringWithFormat:@"%@&page=%ld",Hot,_pageCount] parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
         
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         NSDictionary *dic = responseObject;
         NSString *status = dic[@"status"];
         NSInteger code = [dic[@"code"]integerValue];
-        self.listArray = [NSMutableArray new];
         if ([status isEqualToString:@"success"] && code == 0) {
             NSDictionary *dict = dic[@"success"];
             NSArray *rcArray = dict[@"rcData"];
+            if (self.refreshing) {
+                if (self.listArray.count > 0) {
+                    [self.listArray removeAllObjects];
+                }
+            }  
             for (NSDictionary *rcDic in rcArray) {
                 HotModel *model = [[HotModel alloc]initWithDictionary:rcDic];
-                
                 [self.listArray addObject:model];
                 
             }
+            //完成刷新
             [self.tableView tableViewDidFinishedLoading];
             self.tableView.reachedTheEnd = NO;
             [self.tableView reloadData];
@@ -112,9 +117,7 @@
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         
     }];
-    //完成加载
-    [self.tableView tableViewDidFinishedLoading];
-    self.tableView.reachedTheEnd = NO;
+    
 }
 
 //手指拖动
@@ -134,7 +137,7 @@
         self.tableView = [[PullingRefreshTableView alloc]initWithFrame:CGRectMake(0, 0, kScreenWidth, kScreenHeight - 64) pullingDelegate:self];
         self.tableView.delegate = self;
         self.tableView.dataSource = self;
-        
+        self.tableView.rowHeight = 112;
     }
     return _tableView;
 }

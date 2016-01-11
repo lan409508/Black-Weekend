@@ -28,10 +28,12 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     [self showBackButton];
+    self.listArray = [NSMutableArray new];
+
     self.title = @"精选活动";
     [self.view addSubview:self.tableView];
     [self.tableView registerNib:[UINib nibWithNibName:@"ActivityTableViewCell"  bundle:nil]forCellReuseIdentifier:@"cell"];
-    self.tableView.rowHeight = 120;
+    self.tableView.rowHeight = 90;
     [self.tableView launchRefreshing];
 }
 
@@ -50,6 +52,7 @@
 
 #pragma mark ---------- TableViewDelegate
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    //取点击那一行的数据
     ActivityModel *model = self.listArray[indexPath.row];
     UIStoryboard *main = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
     ActivityDetailViewController *actVC = [main instantiateViewControllerWithIdentifier:@"ActivityDetailVC"];
@@ -60,14 +63,16 @@
 }
 
 #pragma mark ---------- PullingRefreshTableViewDelegate
+//下拉刷新
 - (void)pullingTableViewDidStartRefreshing:(PullingRefreshTableView *)tableView{
     _pageCount = 1;
     self.refreshing = YES;
     [self performSelector:@selector(loadData) withObject:nil afterDelay:1.0];
 }
-
+//上拉加载更多
 - (void)pullingTableViewDidStartLoading:(PullingRefreshTableView *)tableView{
-    _pageCount = 1;
+    _pageCount += 1;
+    self.refreshing = NO;
     [self performSelector:@selector(loadData ) withObject:nil afterDelay:1.0];
 }
 
@@ -81,21 +86,27 @@
     AFHTTPSessionManager *sessionManager = [AFHTTPSessionManager manager];
     sessionManager.responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"text/html"];
     [sessionManager GET:[NSString stringWithFormat:@"%@&page=%ld",kActivity,_pageCount] parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
-        
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         NSDictionary *dic = responseObject;
         NSString *status = dic[@"status"];
         NSInteger code = [dic[@"code"]integerValue];
-        self.listArray = [NSMutableArray new];
         if ([status isEqualToString:@"success"] && code == 0) {
             NSDictionary *dict = dic[@"success"];
             NSArray *acArray = dict[@"acData"];
+            if (self.refreshing) {
+                //下拉刷新的时候需要移除数组中的元素
+                if (self.listArray.count > 0) {
+                    [self.listArray removeAllObjects];
+                }
+            }
             for (NSDictionary *acDic in acArray) {
                 ActivityModel *model = [[ActivityModel alloc]initWithDictionary:acDic];
                 [self.listArray addObject:model];
             }
+            
             [self.tableView tableViewDidFinishedLoading];
             self.tableView.reachedTheEnd = NO;
+            //刷新tableView,它会重新执行tableView的所有代理方法 
             [self.tableView reloadData];
         
         } else {
@@ -105,9 +116,6 @@
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         
     }];
-    //完成加载
-    [self.tableView tableViewDidFinishedLoading];
-    self.tableView.reachedTheEnd = NO;
 }
 
 //手指拖动
@@ -127,6 +135,7 @@
         self.tableView = [[PullingRefreshTableView alloc]initWithFrame:CGRectMake(0, 0, kScreenWidth, kScreenHeight - 64) pullingDelegate:self];
         self.tableView.delegate = self;
         self.tableView.dataSource = self;
+        
         
     }
     return _tableView;

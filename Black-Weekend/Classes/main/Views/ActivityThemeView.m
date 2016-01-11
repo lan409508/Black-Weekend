@@ -22,6 +22,7 @@
 
 @property (nonatomic, strong) UIScrollView *mainScrollView;
 @property (nonatomic, strong) UIImageView *headImageView;
+@property (nonatomic, strong) UIButton *btn;
 
 @end
 
@@ -51,15 +52,15 @@
         //每一段活动信息
         CGFloat height = [HWTools getTextHeightWithText:dic[@"description"] BigestSize:CGSizeMake(kScreenWidth, 1000) textFont:15.0];
         CGFloat y;
-        if (_previousImageBottom > 186) { //如果图片底部的高度没有值（也就是小于450）,也就说明是加载第一个lable，那么y的值不应该减去186
-            y = 186 + _previousImageBottom - 186;
+        if (_previousImageBottom > 200) { //如果图片底部的高度没有值（也就是小于200）,也就说明是加载第一个lable，那么y的值不应该减去200
+            y = 200 + _previousImageBottom - 200;
         } else {
-            y = 186 + _previousImageBottom;
+            y = 200 + _previousImageBottom;
         }
         NSString *title = dic[@"title"];
         if (title != nil) {
             //如果标题存在,标题的高度应该是上次图片的底部高度
-            UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, y, kScreenWidth - 20, 30)];
+            UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, y , kScreenWidth - 20, 30)];
             titleLabel.text = title;
             [self.mainScrollView addSubview:titleLabel];
             //下边详细信息label显示的时候，高度的坐标应该再加30，也就是标题的高度。
@@ -84,12 +85,12 @@
                     //图片不止一张的情况
                     if (lastImgbottom == 0.0) {
                         if (title != nil) { //有title的算上title的30像素
-                            imgY = _previousImageBottom + label.height + 30 + 5;
+                            imgY = _previousImageBottom + label.height + 30 + 5 + 10;
                         } else {
-                            imgY = _previousImageBottom + label.height + 5;
+                            imgY = _previousImageBottom + label.height + 5 + 10;
                         }
                     } else {
-                        imgY = lastImgbottom + 10;
+                        imgY = lastImgbottom + 10 + 10;
                     }
                     
                 } else {
@@ -112,7 +113,7 @@
         }
     }
     
-    self.mainScrollView.contentSize = CGSizeMake(kScreenWidth,_lastLabelBottom);
+    self.mainScrollView.contentSize = CGSizeMake(kScreenWidth,_previousImageBottom + 30);
     
 }
 
