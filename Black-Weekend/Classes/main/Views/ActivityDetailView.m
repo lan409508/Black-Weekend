@@ -125,6 +125,8 @@
                 }
             }
         }
+        //保留最后一个label的高度，+ 30是下边tabbar的高度
+        _lastLabelBottom = label.bottom > _previousImageBottom ? label.bottom + 70 : _previousImageBottom + 70;
     }
     self.mainScrollView.contentSize = CGSizeMake(kScreenWidth,_lastLabelBottom);
 

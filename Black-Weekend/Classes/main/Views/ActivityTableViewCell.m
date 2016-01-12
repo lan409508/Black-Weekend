@@ -29,6 +29,8 @@
 
 - (void)setActivityModel:(ActivityModel *)activityModel{
     [self.headImageView sd_setImageWithURL:[NSURL URLWithString:activityModel.image] placeholderImage:nil];
+    self.headImageView.layer.cornerRadius = 10;
+    self.headImageView.clipsToBounds = YES;
     self.activityTitleLabel.text = activityModel.title;
     self.activityPriceLabel.text = activityModel.price;
     self.ageLabel.text = activityModel.age;

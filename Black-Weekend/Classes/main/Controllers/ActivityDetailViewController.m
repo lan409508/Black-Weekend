@@ -8,7 +8,6 @@
 
 #import "ActivityDetailViewController.h"
 #import "AFNetworking/AFHTTPSessionManager.h"
-#import "MBProgressHUD.h"
 #import "ActivityDetailView.h"
 #import "AppDelegate.h"
 @interface ActivityDetailViewController ()
@@ -46,11 +45,9 @@
 - (void)getModel{
     AFHTTPSessionManager *sessionMaganer = [AFHTTPSessionManager manager];
     sessionMaganer.responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"text/html"];
-    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     
     [sessionMaganer GET:[NSString stringWithFormat:@"%@&id=%@",kActivityDetail,self.activityId] parameters:nil progress: ^(NSProgress * _Nonnull downloadProgress) {
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        [MBProgressHUD hideAllHUDsForView:self.view animated:YES];
         NSDictionary *dic = responseObject;
         NSString *status = dic[@"status"];
         NSInteger code = [dic[@"code"] integerValue];

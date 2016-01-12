@@ -71,8 +71,6 @@
         label.numberOfLines = 0;
         label.font = [UIFont systemFontOfSize:15.0];
         [self.mainScrollView addSubview:label];
-        //保留最后一个label的高度，+ 30是下边tabbar的高度
-        _lastLabelBottom = label.bottom + 10 + 30;
         
         NSArray *urlsArray = dic[@"urls"];
         if (urlsArray == nil) { //当某一个段落中没有图片的时候，上次图片的高度用上次label的底部高度+10
@@ -111,7 +109,10 @@
                 _lastImageView = lastImgbottom + 30;
             }
         }
+        //保留最后一个label的高度，+ 30是下边tabbar的高度
+        _lastLabelBottom = label.bottom > _previousImageBottom ? label.bottom + 70 : _previousImageBottom + 70;
     }
+   
     
     self.mainScrollView.contentSize = CGSizeMake(kScreenWidth,_previousImageBottom + 30);
     

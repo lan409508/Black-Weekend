@@ -14,12 +14,17 @@
 
 #import <UIKit/UIKit.h>
 #import "HWDefine.h"
-#import "UIViewController+Common.h"
 #import "HWTools.h"
 #import "UIView+Extension.h"
+#import "UIViewController+Common.h"
+
 #define kScreenWidth  [UIScreen mainScreen].bounds.size.width
+
 #define kScreenHeight [UIScreen mainScreen].bounds.size.height
 
+#define RGB(x,y,z) [UIColor colorWithRed:x/255.0 green:y/255.0 blue:z/255.0 alpha:1.0]
+
+#define SeparatorColor RGB(228, 228, 228) //222 160 改成170
 
 #ifdef DEBUG
 #	define LXJLog(fmt, ...) NSLog((@"%s [Line %d] " fmt), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__);
