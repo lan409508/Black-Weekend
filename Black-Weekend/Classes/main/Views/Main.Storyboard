@@ -181,7 +181,6 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="Gez-oJ-ODN">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" red="0.10980392156862745" green="0.72549019607843135" blue="0.74901960784313726" alpha="1" colorSpace="calibratedRGB"/>
                         <textAttributes key="titleTextAttributes">
                             <color key="textColor" red="0.98273123755828429" green="1" blue="0.98429558183579691" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
                             <color key="textShadowColor" red="1" green="1" blue="1" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>

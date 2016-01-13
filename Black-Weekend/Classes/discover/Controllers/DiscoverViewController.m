@@ -28,16 +28,24 @@ PullingRefreshTableViewDelegate>
 
 @implementation DiscoverViewController
 
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:YES];
+    self.tabBarController.tabBar.hidden = NO;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     [self.tableView registerNib:[UINib nibWithNibName:@"DiscoverTableViewCell" bundle:nil] forCellReuseIdentifier:@"cell"];
     self.array = [NSMutableArray new];
     self.edgesForExtendedLayout = UIRectEdgeNone;
-    [self.tableView setHeaderOnly:YES];
+//    [self.tableView setHeaderOnly:YES];
     [self.view addSubview:self.tableView];
+    self.navigationController.navigationBar.barTintColor = MineColor;
     [self loadData];
 }
+
+
 
 #pragma mark --------- TableViewDatasource
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
@@ -56,7 +64,6 @@ PullingRefreshTableViewDelegate>
 
 #pragma mark --------- TableViewDelegate
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-
     ActivityModel *model = self.array[indexPath.row];
     UIStoryboard *main = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
     ActivityDetailViewController *actVC = [main instantiateViewControllerWithIdentifier:@"ActivityDetailVC"];

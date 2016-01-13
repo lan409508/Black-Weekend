@@ -23,6 +23,7 @@
 		7A0FBB071C3BA081004D3C31 /* MainModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A0FBB061C3BA081004D3C31 /* MainModel.m */; };
 		7A0FBB0B1C3BA4F6004D3C31 /* Property List.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7A0FBB0A1C3BA4F6004D3C31 /* Property List.plist */; };
 		7A49F7361C3D20180030159E /* UIViewController+Common.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A49F7351C3D20180030159E /* UIViewController+Common.m */; };
+		7A5998401C462C2A008C84F2 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A59983F1C462C2A008C84F2 /* MessageUI.framework */; };
 		7A69DF931C3F5827001BC9E8 /* MainList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7A69DF921C3F5827001BC9E8 /* MainList.plist */; };
 		7A69DF951C3F5D60001BC9E8 /* ActivityTheme.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7A69DF941C3F5D60001BC9E8 /* ActivityTheme.plist */; };
 		7A69DF981C3F5ED7001BC9E8 /* ActivityThemeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A69DF971C3F5ED7001BC9E8 /* ActivityThemeView.m */; };
@@ -94,6 +95,7 @@
 		7A0FBB0A1C3BA4F6004D3C31 /* Property List.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Property List.plist"; sourceTree = "<group>"; };
 		7A49F7341C3D20180030159E /* UIViewController+Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIViewController+Common.h"; path = "../../Classes/main/Controllers/UIViewController+Common.h"; sourceTree = "<group>"; };
 		7A49F7351C3D20180030159E /* UIViewController+Common.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIViewController+Common.m"; path = "../../Classes/main/Controllers/UIViewController+Common.m"; sourceTree = "<group>"; };
+		7A59983F1C462C2A008C84F2 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		7A69DF921C3F5827001BC9E8 /* MainList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; name = MainList.plist; path = ../Controllers/MainList.plist; sourceTree = "<group>"; };
 		7A69DF941C3F5D60001BC9E8 /* ActivityTheme.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = ActivityTheme.plist; path = ../Controllers/ActivityTheme.plist; sourceTree = "<group>"; };
 		7A69DF961C3F5ED7001BC9E8 /* ActivityThemeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActivityThemeView.h; sourceTree = "<group>"; };
@@ -165,6 +167,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7A5998401C462C2A008C84F2 /* MessageUI.framework in Frameworks */,
 				7AF4C7471C4336F500F37C19 /* CoreLocation.framework in Frameworks */,
 				7A0FBB041C3BA052004D3C31 /* AVFoundation.framework in Frameworks */,
 				9ECE9887F40BDA70131CCABC /* libPods.a in Frameworks */,
@@ -177,6 +180,7 @@
 		3B292FC6C0B3CB159E8D581A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7A59983F1C462C2A008C84F2 /* MessageUI.framework */,
 				7AF4C7461C4336F500F37C19 /* CoreLocation.framework */,
 				7A0FBB031C3BA052004D3C31 /* AVFoundation.framework */,
 				0231E9CDD6F1199837462202 /* libPods.a */,
