@@ -10,9 +10,11 @@
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
-@property (strong, nonatomic) UIWindow *window;
 
-@property (strong, nonatomic) UITabBarController *tabBarVC;
+@property (nonatomic, strong) UIWindow *window;
+@property (nonatomic, strong) UITabBarController *tabBarVC;
+@property (nonatomic, strong) NSString *wbToken;
+
 
 @end
 

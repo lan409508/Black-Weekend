@@ -7,19 +7,32 @@
 //
 
 #import "AppDelegate.h"
-#import "MainViewController.h"
-#import "DiscoverViewController.h"
-#import "MineViewController.h"
-@interface AppDelegate ()
+#import "WeiboSDK.h"
+#import "WXApi.h"
+@interface AppDelegate ()<WeiboSDKDelegate,WXApiDelegate>
+@property(retain,nonatomic)UINavigationController *nav;
+@end
 
+@interface WBBaseRequest ()
+-(void)debugPrint;
+@end
+
+@interface WBBaseResponse ()
+-(void)debugPrint;
 @end
 
 @implementation AppDelegate
 
+@synthesize wbToken;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
+    
+    
+    [WeiboSDK enableDebugMode:YES];
+    [WeiboSDK registerApp:kAPPkey];
+    [WXApi registerApp:@"wx31926d2c58dda164"];
     
     //UITabBarController
     self.tabBarVC = [[UITabBarController alloc]init];
@@ -55,6 +68,33 @@
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     return YES;
+}
+
+#pragma mark -------- 微博代理方法
+- (void)didReceiveWeiboRequest:(WBBaseRequest *)request{
+    
+}
+
+- (void)didReceiveWeiboResponse:(WBBaseResponse *)response{
+
+}
+
+#pragma mark -------- 微信代理方法
+
+
+#pragma mark -------- SDK
+
+- (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<NSString *,id> *)options{
+    return [WeiboSDK handleOpenURL:url delegate:self];
+}
+
+- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation{
+    return [WXApi handleOpenURL:url delegate:self];
+}
+
+- (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url{
+    return [WeiboSDK handleOpenURL:url delegate:self];
+    return [WXApi handleOpenURL:url delegate:self];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {
