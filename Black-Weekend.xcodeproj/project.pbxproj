@@ -24,7 +24,6 @@
 		7A08E9B01C4746C900434524 /* ShareView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A08E9AF1C4746C900434524 /* ShareView.m */; };
 		7A08E9B31C474DDA00434524 /* ShareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A08E9B21C474DDA00434524 /* ShareViewController.m */; };
 		7A08E9C31C479B6400434524 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A08E9C11C479B6400434524 /* LoginViewController.m */; };
-		7A08E9C41C479B6400434524 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7A08E9C21C479B6400434524 /* LoginViewController.xib */; };
 		7A0FBB041C3BA052004D3C31 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A0FBB031C3BA052004D3C31 /* AVFoundation.framework */; };
 		7A0FBB071C3BA081004D3C31 /* MainModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A0FBB061C3BA081004D3C31 /* MainModel.m */; };
 		7A0FBB0B1C3BA4F6004D3C31 /* Property List.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7A0FBB0A1C3BA4F6004D3C31 /* Property List.plist */; };
@@ -78,6 +77,14 @@
 		7AF98FF71C3CBF3C009855D2 /* ThemeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AF98FF61C3CBF3C009855D2 /* ThemeViewController.m */; };
 		7AF98FFA1C3CBFFB009855D2 /* ClassifyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AF98FF91C3CBFFB009855D2 /* ClassifyViewController.m */; };
 		7AF990001C3CC070009855D2 /* HotViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AF98FFF1C3CC070009855D2 /* HotViewController.m */; };
+		7AFA37291C48E9770097760D /* Bmob_iOS_SDK更新历史.txt in Resources */ = {isa = PBXBuildFile; fileRef = 7AFA37271C48E9770097760D /* Bmob_iOS_SDK更新历史.txt */; };
+		7AFA372A1C48E9770097760D /* BmobSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AFA37281C48E9770097760D /* BmobSDK.framework */; };
+		7AFA372C1C48E9DE0097760D /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AFA372B1C48E9DE0097760D /* MobileCoreServices.framework */; };
+		7AFA372E1C48E9E80097760D /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AFA372D1C48E9E80097760D /* CFNetwork.framework */; };
+		7AFA37301C48EA050097760D /* libz.1.2.5.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AFA372F1C48EA050097760D /* libz.1.2.5.tbd */; };
+		7AFA37321C48EA210097760D /* libicucore.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AFA37311C48EA210097760D /* libicucore.tbd */; };
+		7AFA37341C48EA3D0097760D /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AFA37331C48EA3D0097760D /* MediaPlayer.framework */; };
+		7AFA373A1C48EDC10097760D /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7AFA37391C48EDC10097760D /* Login.storyboard */; };
 		7AFC248A1C44A00D00200228 /* ProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 7AFC24871C44A00D00200228 /* ProgressHUD.bundle */; };
 		7AFC248B1C44A00D00200228 /* ProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AFC24891C44A00D00200228 /* ProgressHUD.m */; };
 		7AFC248F1C44FAA600200228 /* DiscoverTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AFC248D1C44FAA600200228 /* DiscoverTableViewCell.m */; };
@@ -116,9 +123,8 @@
 		7A08E9AF1C4746C900434524 /* ShareView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShareView.m; sourceTree = "<group>"; };
 		7A08E9B11C474DDA00434524 /* ShareViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShareViewController.h; sourceTree = "<group>"; };
 		7A08E9B21C474DDA00434524 /* ShareViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShareViewController.m; sourceTree = "<group>"; };
-		7A08E9C01C479B6400434524 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
-		7A08E9C11C479B6400434524 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
-		7A08E9C21C479B6400434524 /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		7A08E9C01C479B6400434524 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoginViewController.h; path = ../../mine/Controllers/LoginViewController.h; sourceTree = "<group>"; };
+		7A08E9C11C479B6400434524 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginViewController.m; path = ../../mine/Controllers/LoginViewController.m; sourceTree = "<group>"; };
 		7A0FBB031C3BA052004D3C31 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		7A0FBB051C3BA081004D3C31 /* MainModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainModel.h; sourceTree = "<group>"; };
 		7A0FBB061C3BA081004D3C31 /* MainModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainModel.m; sourceTree = "<group>"; };
@@ -207,6 +213,14 @@
 		7AF98FF91C3CBFFB009855D2 /* ClassifyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClassifyViewController.m; sourceTree = "<group>"; };
 		7AF98FFE1C3CC070009855D2 /* HotViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HotViewController.h; sourceTree = "<group>"; };
 		7AF98FFF1C3CC070009855D2 /* HotViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HotViewController.m; sourceTree = "<group>"; };
+		7AFA37271C48E9770097760D /* Bmob_iOS_SDK更新历史.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Bmob_iOS_SDK更新历史.txt"; sourceTree = "<group>"; };
+		7AFA37281C48E9770097760D /* BmobSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BmobSDK.framework; sourceTree = "<group>"; };
+		7AFA372B1C48E9DE0097760D /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		7AFA372D1C48E9E80097760D /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		7AFA372F1C48EA050097760D /* libz.1.2.5.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.1.2.5.tbd; path = usr/lib/libz.1.2.5.tbd; sourceTree = SDKROOT; };
+		7AFA37311C48EA210097760D /* libicucore.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libicucore.tbd; path = usr/lib/libicucore.tbd; sourceTree = SDKROOT; };
+		7AFA37331C48EA3D0097760D /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		7AFA37391C48EDC10097760D /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		7AFC24871C44A00D00200228 /* ProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = ProgressHUD.bundle; sourceTree = "<group>"; };
 		7AFC24881C44A00D00200228 /* ProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProgressHUD.h; sourceTree = "<group>"; };
 		7AFC24891C44A00D00200228 /* ProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProgressHUD.m; sourceTree = "<group>"; };
@@ -220,6 +234,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7AFA37341C48EA3D0097760D /* MediaPlayer.framework in Frameworks */,
+				7AFA37321C48EA210097760D /* libicucore.tbd in Frameworks */,
+				7AFA37301C48EA050097760D /* libz.1.2.5.tbd in Frameworks */,
+				7AFA372E1C48E9E80097760D /* CFNetwork.framework in Frameworks */,
+				7AFA372C1C48E9DE0097760D /* MobileCoreServices.framework in Frameworks */,
 				7A08E9AA1C472D4600434524 /* libc++.tbd in Frameworks */,
 				7A5998651C465119008C84F2 /* libsqlite3.tbd in Frameworks */,
 				7A5998631C46510A008C84F2 /* libz.tbd in Frameworks */,
@@ -229,6 +248,7 @@
 				7A59985F1C4650ED008C84F2 /* Foundation.framework in Frameworks */,
 				7A59985D1C4650D6008C84F2 /* UIKit.framework in Frameworks */,
 				7A59985B1C4650C9008C84F2 /* CoreText.framework in Frameworks */,
+				7AFA372A1C48E9770097760D /* BmobSDK.framework in Frameworks */,
 				7A5998591C4650BD008C84F2 /* CoreTelephony.framework in Frameworks */,
 				7A5998571C4650AD008C84F2 /* Security.framework in Frameworks */,
 				7A5998531C46506D008C84F2 /* ImageIO.framework in Frameworks */,
@@ -247,6 +267,11 @@
 		3B292FC6C0B3CB159E8D581A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7AFA37331C48EA3D0097760D /* MediaPlayer.framework */,
+				7AFA37311C48EA210097760D /* libicucore.tbd */,
+				7AFA372F1C48EA050097760D /* libz.1.2.5.tbd */,
+				7AFA372D1C48E9E80097760D /* CFNetwork.framework */,
+				7AFA372B1C48E9DE0097760D /* MobileCoreServices.framework */,
 				7A08E9A91C472D4600434524 /* libc++.tbd */,
 				7A5998641C465119008C84F2 /* libsqlite3.tbd */,
 				7A5998621C46510A008C84F2 /* libz.tbd */,
@@ -320,7 +345,7 @@
 		7A00D87C1C3A4E4100FA1077 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				7A00D8881C3A4E4100FA1077 /* Views */,
+				7AFA37351C48ED350097760D /* Login */,
 				7A00D8831C3A4E4100FA1077 /* main */,
 				7A00D87D1C3A4E4100FA1077 /* discover */,
 				7A00D8891C3A4E4100FA1077 /* mine */,
@@ -372,6 +397,7 @@
 			isa = PBXGroup;
 			children = (
 				7A00D8841C3A4E4100FA1077 /* Controllers */,
+				7A00D8881C3A4E4100FA1077 /* Views */,
 				7A00D8871C3A4E4100FA1077 /* Models */,
 			);
 			path = main;
@@ -440,8 +466,7 @@
 				7A8B69241C4243E400E84B97 /* HotTableViewCell.m */,
 				7A8B69251C4243E400E84B97 /* HotTableViewCell.xib */,
 			);
-			name = Views;
-			path = main/Views;
+			path = Views;
 			sourceTree = "<group>";
 		};
 		7A00D8891C3A4E4100FA1077 /* mine */ = {
@@ -459,9 +484,6 @@
 			children = (
 				7A00D88B1C3A4E4100FA1077 /* MineViewController.h */,
 				7A00D88C1C3A4E4100FA1077 /* MineViewController.m */,
-				7A08E9C01C479B6400434524 /* LoginViewController.h */,
-				7A08E9C11C479B6400434524 /* LoginViewController.m */,
-				7A08E9C21C479B6400434524 /* LoginViewController.xib */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -484,6 +506,7 @@
 		7A00D8921C3A4E4B00FA1077 /* Library */ = {
 			isa = PBXGroup;
 			children = (
+				7AFA37261C48E9770097760D /* Bmob_SDK_iOS_v1.6.6 */,
 				7A08E9A41C47248900434524 /* WeixinSDK */,
 				7A5998411C464F80008C84F2 /* libWeiboSDK */,
 				7AFC24861C44A00D00200228 /* ProgressHUD */,
@@ -578,6 +601,49 @@
 			path = Library/HWtools;
 			sourceTree = "<group>";
 		};
+		7AFA37261C48E9770097760D /* Bmob_SDK_iOS_v1.6.6 */ = {
+			isa = PBXGroup;
+			children = (
+				7AFA37271C48E9770097760D /* Bmob_iOS_SDK更新历史.txt */,
+				7AFA37281C48E9770097760D /* BmobSDK.framework */,
+			);
+			path = Bmob_SDK_iOS_v1.6.6;
+			sourceTree = "<group>";
+		};
+		7AFA37351C48ED350097760D /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				7AFA37361C48ED350097760D /* Controllers */,
+				7AFA37371C48ED350097760D /* Models */,
+				7AFA37381C48ED360097760D /* Views */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		7AFA37361C48ED350097760D /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				7A08E9C01C479B6400434524 /* LoginViewController.h */,
+				7A08E9C11C479B6400434524 /* LoginViewController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		7AFA37371C48ED350097760D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		7AFA37381C48ED360097760D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				7AFA37391C48EDC10097760D /* Login.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		7AFC24861C44A00D00200228 /* ProgressHUD */ = {
 			isa = PBXGroup;
 			children = (
@@ -657,16 +723,17 @@
 				7AFC248A1C44A00D00200228 /* ProgressHUD.bundle in Resources */,
 				7A00D89D1C3A50D500FA1077 /* Mine.Storyboard in Resources */,
 				7AFC24901C44FAA600200228 /* DiscoverTableViewCell.xib in Resources */,
-				7A08E9C41C479B6400434524 /* LoginViewController.xib in Resources */,
 				7A00D8971C3A50A300FA1077 /* Main.Storyboard in Resources */,
 				7AF4C7631C43A82600F37C19 /* typeid6.plist in Resources */,
 				7AF4C7651C43A82E00F37C19 /* typeud21.plist in Resources */,
+				7AFA373A1C48EDC10097760D /* Login.storyboard in Resources */,
 				7AF3B5F71C45112900771E7C /* Discover.plist in Resources */,
 				7A69DFBE1C3FCA44001BC9E8 /* ActivityTableViewCell.xib in Resources */,
 				7A59984F1C464F80008C84F2 /* WeiboSDK.bundle in Resources */,
 				7A69DF951C3F5D60001BC9E8 /* ActivityTheme.plist in Resources */,
 				7AF4C7691C43A83700F37C19 /* typeid23.plist in Resources */,
 				7A8B69271C4243E400E84B97 /* HotTableViewCell.xib in Resources */,
+				7AFA37291C48E9770097760D /* Bmob_iOS_SDK更新历史.txt in Resources */,
 				7A69DF9E1C3F9E69001BC9E8 /* blueArrow.png in Resources */,
 				7A00DC721C3A766800FA1077 /* MainTableViewCell.xib in Resources */,
 				7A00D8991C3A50BD00FA1077 /* Discover.Storyboard in Resources */,
@@ -869,6 +936,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Black-Weekend/Library/Bmob_SDK_iOS_v1.6.6",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/Black-Weekend/Library/HWtools/BlackWeekend.pch";
 				INFOPLIST_FILE = "Black-Weekend/Info.plist";
@@ -892,6 +963,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Black-Weekend/Library/Bmob_SDK_iOS_v1.6.6",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/Black-Weekend/Library/HWtools/BlackWeekend.pch";
 				INFOPLIST_FILE = "Black-Weekend/Info.plist";

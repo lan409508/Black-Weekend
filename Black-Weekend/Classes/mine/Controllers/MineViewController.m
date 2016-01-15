@@ -266,8 +266,9 @@
     [self.shareView addSubview:quanBtn];
     
     //QQ
-//    UIButton *qqBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-//    qqBtn.frame = CGRectMake(<#CGFloat x#>, <#CGFloat y#>, <#CGFloat width#>, <#CGFloat height#>)
+    UIButton *qqBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    qqBtn.frame = CGRectMake(40, 100, 70, 70);
+    [self.shareView addSubview:qqBtn];
     
     //qq空间
     
@@ -343,8 +344,9 @@
 }
 
 - (void)login {
-    LoginViewController *loginVC = [[LoginViewController alloc]init];
-    [self.navigationController pushViewController:loginVC animated:YES];
+    UIStoryboard *loginSB = [UIStoryboard storyboardWithName:@"Login" bundle:nil];
+    UINavigationController *nav = [loginSB instantiateViewControllerWithIdentifier:@"LoginNav"];
+    [self.navigationController presentViewController:nav animated:YES completion:nil];
 }
 
 - (void)sendEmail {

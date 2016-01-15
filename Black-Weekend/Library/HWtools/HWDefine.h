@@ -46,4 +46,7 @@ typedef NS_ENUM(NSInteger,ClassifyListType) {
 #define kWeixinAppID @"wx31926d2c58dda164"
 #define kWeixinAppSecret @"a4c636cfee996c10e73eee5e0abcc1c9"
 
+//bmob
+#define KbmobAppkey @"42a89b3c88ca3f27932eab4f77b4133c"
+
 #endif /* HWDefine_h */

@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "WeiboSDK.h"
 #import "WXApi.h"
+#import <BmobSDK/Bmob.h>
 @interface AppDelegate ()<WeiboSDKDelegate,WXApiDelegate>
 @property(retain,nonatomic)UINavigationController *nav;
 @end
@@ -32,7 +33,13 @@
     
     [WeiboSDK enableDebugMode:YES];
     [WeiboSDK registerApp:kAPPkey];
-    [WXApi registerApp:@"wx31926d2c58dda164"];
+    [WXApi registerApp:kWeixinAppID];
+    [Bmob registerWithAppKey:KbmobAppkey];
+    
+    
+    
+    
+    
     
     //UITabBarController
     self.tabBarVC = [[UITabBarController alloc]init];
