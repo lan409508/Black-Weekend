@@ -10,8 +10,18 @@
 #import "WeiboSDK.h"
 #import "WXApi.h"
 #import <BmobSDK/Bmob.h>
-@interface AppDelegate ()<WeiboSDKDelegate,WXApiDelegate>
+//1.引入定位所需要的框架
+#import <CoreLocation/CoreLocation.h>
+
+@interface AppDelegate ()<WeiboSDKDelegate,WXApiDelegate,CLLocationManagerDelegate>
+{
+    //2.创建定位所需要的类的实例对象
+    CLLocationManager *_locationManager;
+    //创建地理编码对象
+    CLGeocoder *_geocoder;
+}
 @property(retain,nonatomic)UINavigationController *nav;
+
 @end
 
 @interface WBBaseRequest ()
@@ -30,15 +40,37 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     
+    //初始化定位对象
+    _locationManager = [[CLLocationManager alloc]init];
+    //初始化地理编码对象
+    _geocoder = [[CLGeocoder alloc]init];
+    if (![CLLocationManager locationServicesEnabled]) {
+        LXJLog(@"用户位置服务不可用");
+    }
     
+    //如果没有授权则请求用户授权
+    if ([CLLocationManager authorizationStatus] == kCLAuthorizationStatusNotDetermined) {
+        [_locationManager requestWhenInUseAuthorization];
+    } else if ([CLLocationManager authorizationStatus] == kCLAuthorizationStatusAuthorizedWhenInUse) {
+        //设置代理
+        _locationManager.delegate = self;
+        //设置定位精度，精度越高越耗电
+        _locationManager.desiredAccuracy = kCLLocationAccuracyBest;
+        //定位频率，每个多少米定位一次
+        CLLocationDistance distance = 100.0;
+        _locationManager.distanceFilter = distance;
+        //启动定位服务
+        [_locationManager startUpdatingLocation];
+        
+    }
+    
+    //新浪微博注册
     [WeiboSDK enableDebugMode:YES];
     [WeiboSDK registerApp:kAPPkey];
+    //微信注册
     [WXApi registerApp:kWeixinAppID];
+    //注册bmobkey
     [Bmob registerWithAppKey:KbmobAppkey];
-    
-    
-    
-    
     
     
     //UITabBarController
@@ -75,6 +107,7 @@
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     return YES;
+   
 }
 
 #pragma mark -------- 微博代理方法
@@ -102,6 +135,30 @@
 - (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url{
     return [WeiboSDK handleOpenURL:url delegate:self];
     return [WXApi handleOpenURL:url delegate:self];
+}
+
+#pragma mark -------- CLLocationManagerDelegate
+/*定位协议代理方法
+ param manager 当前使用的定位对象
+ locations 返回定位的数据，是一个数组对象，数组里面的元素是CLLocation类型
+ */
+- (void)locationManager:(CLLocationManager *)manager
+     didUpdateLocations:(NSArray<CLLocation *> *)locations{
+    //从数组中取出一个定位的信息
+    CLLocation *location = [locations firstObject];
+    LXJLog(@"%@",location);
+    //从CLLocation中获取坐标
+    //CLLocationCoordinate2D  坐标系，里边包含经度和纬度
+    CLLocationCoordinate2D coordinate = location.coordinate;
+    LXJLog(@"经度：%f  纬度：%f 海拔：%f 航向：%f行走速度：%f", coordinate.longitude, coordinate.latitude, location.altitude,location.course,location.speed);
+    [_geocoder reverseGeocodeLocation:location completionHandler:^(NSArray<CLPlacemark *> * _Nullable placemarks, NSError * _Nullable error) {
+        CLPlacemark *placeMark = [placemarks firstObject];
+        NSString *city = placeMark.addressDictionary[@"city"];
+        NSLog(@"%@",city);
+        NSLog(@"%@",placeMark.addressDictionary);
+    }];
+    //如果不需要使用定位，使用完及时关闭定位服务
+    [_locationManager stopUpdatingLocation];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {

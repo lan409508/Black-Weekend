@@ -90,8 +90,8 @@
         case 0:
         {
             UIAlertController *alert=[UIAlertController alertControllerWithTitle:@"提示" message:@"您确定要删除缓存?" preferredStyle:UIAlertControllerStyleAlert];
-            
-            UIAlertAction* defaultAction = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+
+            UIAlertAction *defaultAction = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
                 
                 LXJLog(@"%@",NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES));
                 SDImageCache *imageCache = [SDImageCache sharedImageCache];
@@ -101,7 +101,7 @@
                 [self.tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
                 
             }];
-            UIAlertAction* defaultAction1 = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+            UIAlertAction *defaultAction1 = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
                 
             }];
             
@@ -170,6 +170,8 @@
 }
 
 #pragma mark -------- 懒加载
+/*定位功能几乎是现在所有应用程序都包含的一个功能，在iOS中通过CoreLocation
+ */
 
 - (UITableView *)tableView {
     if (_tableView == nil) {
@@ -322,7 +324,7 @@
 - (WBMessageObject *)messageToShare
 {
     WBMessageObject *message = [WBMessageObject message];
-    message.text = @"啦啦啦，回家回家";
+    message.text = @"啦啦啦,,,";
     return message;
 }
 
